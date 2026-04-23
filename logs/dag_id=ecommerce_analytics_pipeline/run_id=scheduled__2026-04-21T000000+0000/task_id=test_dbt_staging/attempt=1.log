@@ -1,0 +1,50 @@
+[2026-04-22T10:17:55.604+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ecommerce_analytics_pipeline.test_dbt_staging scheduled__2026-04-21T00:00:00+00:00 [queued]>
+[2026-04-22T10:17:55.631+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ecommerce_analytics_pipeline.test_dbt_staging scheduled__2026-04-21T00:00:00+00:00 [queued]>
+[2026-04-22T10:17:55.633+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2026-04-22T10:17:55.671+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): test_dbt_staging> on 2026-04-21 00:00:00+00:00
+[2026-04-22T10:17:55.686+0000] {standard_task_runner.py:60} INFO - Started process 2882 to run task
+[2026-04-22T10:17:55.694+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'ecommerce_analytics_pipeline', 'test_dbt_staging', 'scheduled__2026-04-21T00:00:00+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/ecommerce_pipeline.py', '--cfg-path', '/tmp/tmpd4p2urtx']
+[2026-04-22T10:17:55.715+0000] {standard_task_runner.py:88} INFO - Job 16: Subtask test_dbt_staging
+[2026-04-22T10:17:56.144+0000] {task_command.py:423} INFO - Running <TaskInstance: ecommerce_analytics_pipeline.test_dbt_staging scheduled__2026-04-21T00:00:00+00:00 [running]> on host 5f98f2d03914
+[2026-04-22T10:17:56.417+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='sarthak' AIRFLOW_CTX_DAG_ID='ecommerce_analytics_pipeline' AIRFLOW_CTX_TASK_ID='test_dbt_staging' AIRFLOW_CTX_EXECUTION_DATE='2026-04-21T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-04-21T00:00:00+00:00'
+[2026-04-22T10:17:56.423+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-04-22T10:17:56.431+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n            cd /opt/***/dbt_project &&             dbt test --select staging --profiles-dir .\n        ']
+[2026-04-22T10:17:56.460+0000] {subprocess.py:86} INFO - Output:
+[2026-04-22T10:18:05.613+0000] {subprocess.py:93} INFO - [0m10:18:05  Running with dbt=1.7.0
+[2026-04-22T10:18:06.374+0000] {subprocess.py:93} INFO - [0m10:18:06  Registered adapter: postgres=1.7.0
+[2026-04-22T10:18:06.872+0000] {subprocess.py:93} INFO - [0m10:18:06  Found 6 models, 17 tests, 0 sources, 0 exposures, 0 metrics, 401 macros, 0 groups, 0 semantic models
+[2026-04-22T10:18:06.878+0000] {subprocess.py:93} INFO - [0m10:18:06
+[2026-04-22T10:18:07.102+0000] {subprocess.py:93} INFO - [0m10:18:07  Concurrency: 4 threads (target='dev')
+[2026-04-22T10:18:07.104+0000] {subprocess.py:93} INFO - [0m10:18:07
+[2026-04-22T10:18:07.125+0000] {subprocess.py:93} INFO - [0m10:18:07  1 of 11 START test accepted_values_stg_orders_status__completed__cancelled__pending  [RUN]
+[2026-04-22T10:18:07.128+0000] {subprocess.py:93} INFO - [0m10:18:07  2 of 11 START test not_null_stg_customers_customer_id .......................... [RUN]
+[2026-04-22T10:18:07.130+0000] {subprocess.py:93} INFO - [0m10:18:07  3 of 11 START test not_null_stg_customers_email ................................ [RUN]
+[2026-04-22T10:18:07.132+0000] {subprocess.py:93} INFO - [0m10:18:07  4 of 11 START test not_null_stg_orders_customer_id ............................. [RUN]
+[2026-04-22T10:18:07.460+0000] {subprocess.py:93} INFO - [0m10:18:07  3 of 11 PASS not_null_stg_customers_email ...................................... [[32mPASS[0m in 0.32s]
+[2026-04-22T10:18:07.485+0000] {subprocess.py:93} INFO - [0m10:18:07  1 of 11 PASS accepted_values_stg_orders_status__completed__cancelled__pending .. [[32mPASS[0m in 0.35s]
+[2026-04-22T10:18:07.491+0000] {subprocess.py:93} INFO - [0m10:18:07  2 of 11 PASS not_null_stg_customers_customer_id ................................ [[32mPASS[0m in 0.35s]
+[2026-04-22T10:18:07.493+0000] {subprocess.py:93} INFO - [0m10:18:07  5 of 11 START test not_null_stg_orders_order_id ................................ [RUN]
+[2026-04-22T10:18:07.501+0000] {subprocess.py:93} INFO - [0m10:18:07  4 of 11 PASS not_null_stg_orders_customer_id ................................... [[32mPASS[0m in 0.36s]
+[2026-04-22T10:18:07.519+0000] {subprocess.py:93} INFO - [0m10:18:07  6 of 11 START test not_null_stg_orders_product_id .............................. [RUN]
+[2026-04-22T10:18:07.523+0000] {subprocess.py:93} INFO - [0m10:18:07  7 of 11 START test not_null_stg_products_product_id ............................ [RUN]
+[2026-04-22T10:18:07.552+0000] {subprocess.py:93} INFO - [0m10:18:07  8 of 11 START test unique_stg_customers_customer_id ............................ [RUN]
+[2026-04-22T10:18:07.757+0000] {subprocess.py:93} INFO - [0m10:18:07  5 of 11 PASS not_null_stg_orders_order_id ...................................... [[32mPASS[0m in 0.25s]
+[2026-04-22T10:18:07.786+0000] {subprocess.py:93} INFO - [0m10:18:07  7 of 11 PASS not_null_stg_products_product_id .................................. [[32mPASS[0m in 0.24s]
+[2026-04-22T10:18:07.792+0000] {subprocess.py:93} INFO - [0m10:18:07  9 of 11 START test unique_stg_customers_email .................................. [RUN]
+[2026-04-22T10:18:07.798+0000] {subprocess.py:93} INFO - [0m10:18:07  6 of 11 PASS not_null_stg_orders_product_id .................................... [[32mPASS[0m in 0.26s]
+[2026-04-22T10:18:07.803+0000] {subprocess.py:93} INFO - [0m10:18:07  8 of 11 PASS unique_stg_customers_customer_id .................................. [[32mPASS[0m in 0.24s]
+[2026-04-22T10:18:07.815+0000] {subprocess.py:93} INFO - [0m10:18:07  10 of 11 START test unique_stg_orders_order_id ................................. [RUN]
+[2026-04-22T10:18:07.839+0000] {subprocess.py:93} INFO - [0m10:18:07  11 of 11 START test unique_stg_products_product_id ............................. [RUN]
+[2026-04-22T10:18:07.987+0000] {subprocess.py:93} INFO - [0m10:18:07  9 of 11 PASS unique_stg_customers_email ........................................ [[32mPASS[0m in 0.18s]
+[2026-04-22T10:18:08.003+0000] {subprocess.py:93} INFO - [0m10:18:08  10 of 11 PASS unique_stg_orders_order_id ....................................... [[32mPASS[0m in 0.17s]
+[2026-04-22T10:18:08.008+0000] {subprocess.py:93} INFO - [0m10:18:08  11 of 11 PASS unique_stg_products_product_id ................................... [[32mPASS[0m in 0.16s]
+[2026-04-22T10:18:08.059+0000] {subprocess.py:93} INFO - [0m10:18:08
+[2026-04-22T10:18:08.060+0000] {subprocess.py:93} INFO - [0m10:18:08  Finished running 11 tests in 0 hours 0 minutes and 1.18 seconds (1.18s).
+[2026-04-22T10:18:08.124+0000] {subprocess.py:93} INFO - [0m10:18:08
+[2026-04-22T10:18:08.126+0000] {subprocess.py:93} INFO - [0m10:18:08  [32mCompleted successfully[0m
+[2026-04-22T10:18:08.128+0000] {subprocess.py:93} INFO - [0m10:18:08
+[2026-04-22T10:18:08.129+0000] {subprocess.py:93} INFO - [0m10:18:08  Done. PASS=11 WARN=0 ERROR=0 SKIP=0 TOTAL=11
+[2026-04-22T10:18:09.862+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-04-22T10:18:09.919+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=ecommerce_analytics_pipeline, task_id=test_dbt_staging, execution_date=20260421T000000, start_date=20260422T101755, end_date=20260422T101809
+[2026-04-22T10:18:09.986+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-04-22T10:18:10.038+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

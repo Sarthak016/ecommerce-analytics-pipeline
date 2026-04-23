@@ -1,0 +1,16 @@
+order_id,customer_id,product_id,order_date,quantity,unit_price,status
+1001,C001,P01,2024-01-05,2,29.99,completed
+1002,C002,P03,2024-01-06,1,149.99,completed
+1003,C001,P02,2024-01-07,3,9.99,cancelled
+1004,C003,P01,2024-01-08,1,29.99,completed
+1005,C004,P04,2024-01-09,2,49.99,pending
+1006,C002,P02,2024-01-10,1,9.99,completed
+1007,C005,P03,2024-01-11,1,149.99,completed
+1008,C003,P05,2024-01-12,4,19.99,completed
+1009,C001,P04,2024-01-13,2,49.99,cancelled
+1010,C006,P01,2024-01-14,1,29.99,completed
+1011,C004,P02,2024-01-14,2,9.99,completed
+1012,C007,P03,2024-01-15,1,149.99,pending
+1013,,P01,2024-01-15,1,29.99,completed
+1014,C005,,2024-01-16,2,49.99,completed
+1015,C006,P02,2024-01-16,,9.99,completed

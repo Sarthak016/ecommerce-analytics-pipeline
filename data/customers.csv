@@ -1,0 +1,9 @@
+customer_id,name,email,city,state,signup_date,segment
+C001,Ravi Sharma,ravi@email.com,Mumbai,Maharashtra,2023-05-10,Premium
+C002,Priya Patel,priya@email.com,Ahmedabad,Gujarat,2023-06-15,Standard
+C003,Amit Singh,amit@email.com,Delhi,Delhi,2023-07-20,Premium
+C004,Neha Gupta,neha@email.com,Bangalore,Karnataka,2023-08-01,Standard
+C005,Rahul Verma,rahul@email.com,Pune,Maharashtra,2023-09-12,Premium
+C006,Anjali Mehta,anjali@email.com,Chennai,Tamil Nadu,2023-10-05,Standard
+C007,Vikram Nair,vikram@email.com,Hyderabad,Telangana,2023-11-18,Premium
+C001,Ravi Sharma,ravi@email.com,Mumbai,Maharashtra,2023-05-10,Premium
