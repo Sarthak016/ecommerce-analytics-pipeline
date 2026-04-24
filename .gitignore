@@ -4,3 +4,4 @@ __pycache__/
 .env
 dbt_project/target/
 dbt_project/dbt_packages/
+*.txt
