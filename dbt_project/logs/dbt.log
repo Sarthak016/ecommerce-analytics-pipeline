@@ -4665,3 +4665,2320 @@ with relation as (
 [0m10:18:46.671017 [debug] [MainThread]: Connection 'airflow.information_schema' was properly closed.
 [0m10:18:46.672331 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7007b89b0100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7007b737eaf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7007b589e0d0>]}
 [0m10:18:46.673779 [debug] [MainThread]: Flushing usage events
+[0m10:05:26.804806 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x713fa55193d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x713fa33d1fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x713fa33d1610>]}
+
+
+============================== 10:05:26.828189 | 22f1ae0a-8bf2-4ed4-b420-66a859b1620a ==============================
+[0m10:05:26.828189 [info ] [MainThread]: Running with dbt=1.7.0
+[0m10:05:26.830037 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/opt/airflow/dbt_project/logs', 'version_check': 'True', 'profiles_dir': '.', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run --select staging --profiles-dir .', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m10:05:27.571539 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '22f1ae0a-8bf2-4ed4-b420-66a859b1620a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x713fa5d79e80>]}
+[0m10:05:27.733796 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '22f1ae0a-8bf2-4ed4-b420-66a859b1620a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x713fa298c130>]}
+[0m10:05:27.736519 [info ] [MainThread]: Registered adapter: postgres=1.7.0
+[0m10:05:27.767425 [debug] [MainThread]: checksum: 8434eacd4ffdf0ca3ab22bf0e2d55b45306c9599613e842b959405abc489e606, vars: {}, profile: , target: , version: 1.7.0
+[0m10:05:28.258354 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m10:05:28.259674 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m10:05:28.271695 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '22f1ae0a-8bf2-4ed4-b420-66a859b1620a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x713fa2474f10>]}
+[0m10:05:28.340619 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '22f1ae0a-8bf2-4ed4-b420-66a859b1620a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x713fa252dca0>]}
+[0m10:05:28.342088 [info ] [MainThread]: Found 6 models, 17 tests, 0 sources, 0 exposures, 0 metrics, 401 macros, 0 groups, 0 semantic models
+[0m10:05:28.343743 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '22f1ae0a-8bf2-4ed4-b420-66a859b1620a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x713fa252df10>]}
+[0m10:05:28.346818 [info ] [MainThread]: 
+[0m10:05:28.348777 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m10:05:28.351925 [debug] [ThreadPool]: Acquiring new postgres connection 'list_airflow'
+[0m10:05:28.374884 [debug] [ThreadPool]: Using postgres connection "list_airflow"
+[0m10:05:28.376338 [debug] [ThreadPool]: On list_airflow: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "connection_name": "list_airflow"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m10:05:28.377509 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:05:28.396087 [debug] [ThreadPool]: SQL status: SELECT 8 in 0.0 seconds
+[0m10:05:28.398858 [debug] [ThreadPool]: On list_airflow: Close
+[0m10:05:28.405196 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_airflow, now list_airflow_analytics_staging)
+[0m10:05:28.413316 [debug] [ThreadPool]: Acquiring new postgres connection 'list_airflow_analytics_analytics'
+[0m10:05:28.419796 [debug] [ThreadPool]: Using postgres connection "list_airflow_analytics_staging"
+[0m10:05:28.425760 [debug] [ThreadPool]: Using postgres connection "list_airflow_analytics_analytics"
+[0m10:05:28.427679 [debug] [ThreadPool]: On list_airflow_analytics_staging: BEGIN
+[0m10:05:28.429139 [debug] [ThreadPool]: On list_airflow_analytics_analytics: BEGIN
+[0m10:05:28.430460 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m10:05:28.431780 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:05:28.448426 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m10:05:28.450322 [debug] [ThreadPool]: Using postgres connection "list_airflow_analytics_staging"
+[0m10:05:28.451711 [debug] [ThreadPool]: On list_airflow_analytics_staging: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "connection_name": "list_airflow_analytics_staging"} */
+select
+      'airflow' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics_staging'
+    union all
+    select
+      'airflow' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics_staging'
+    union all
+    select
+      'airflow' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics_staging'
+  
+[0m10:05:28.453107 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m10:05:28.455635 [debug] [ThreadPool]: Using postgres connection "list_airflow_analytics_analytics"
+[0m10:05:28.457543 [debug] [ThreadPool]: On list_airflow_analytics_analytics: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "connection_name": "list_airflow_analytics_analytics"} */
+select
+      'airflow' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics_analytics'
+    union all
+    select
+      'airflow' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics_analytics'
+    union all
+    select
+      'airflow' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics_analytics'
+  
+[0m10:05:28.468592 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.0 seconds
+[0m10:05:28.469752 [debug] [ThreadPool]: SQL status: SELECT 3 in 0.0 seconds
+[0m10:05:28.472877 [debug] [ThreadPool]: On list_airflow_analytics_staging: ROLLBACK
+[0m10:05:28.475985 [debug] [ThreadPool]: On list_airflow_analytics_analytics: ROLLBACK
+[0m10:05:28.478158 [debug] [ThreadPool]: On list_airflow_analytics_staging: Close
+[0m10:05:28.479516 [debug] [ThreadPool]: On list_airflow_analytics_analytics: Close
+[0m10:05:28.493448 [debug] [MainThread]: Using postgres connection "master"
+[0m10:05:28.495167 [debug] [MainThread]: On master: BEGIN
+[0m10:05:28.496937 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:05:28.510751 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m10:05:28.512516 [debug] [MainThread]: Using postgres connection "master"
+[0m10:05:28.514131 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m10:05:28.556859 [debug] [MainThread]: SQL status: SELECT 0 in 0.0 seconds
+[0m10:05:28.559452 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '22f1ae0a-8bf2-4ed4-b420-66a859b1620a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x713fa252d280>]}
+[0m10:05:28.560793 [debug] [MainThread]: On master: ROLLBACK
+[0m10:05:28.562388 [debug] [MainThread]: Using postgres connection "master"
+[0m10:05:28.563614 [debug] [MainThread]: On master: BEGIN
+[0m10:05:28.565508 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m10:05:28.567167 [debug] [MainThread]: On master: COMMIT
+[0m10:05:28.569166 [debug] [MainThread]: Using postgres connection "master"
+[0m10:05:28.571363 [debug] [MainThread]: On master: COMMIT
+[0m10:05:28.574107 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m10:05:28.575608 [debug] [MainThread]: On master: Close
+[0m10:05:28.578088 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m10:05:28.579804 [info ] [MainThread]: 
+[0m10:05:28.606698 [debug] [Thread-1  ]: Began running node model.ecommerce_analytics.stg_customers
+[0m10:05:28.608334 [debug] [Thread-2  ]: Began running node model.ecommerce_analytics.stg_orders
+[0m10:05:28.609652 [debug] [Thread-3  ]: Began running node model.ecommerce_analytics.stg_products
+[0m10:05:28.611071 [info ] [Thread-1  ]: 1 of 3 START sql view model analytics_staging.stg_customers .................... [RUN]
+[0m10:05:28.613390 [info ] [Thread-2  ]: 2 of 3 START sql view model analytics_staging.stg_orders ....................... [RUN]
+[0m10:05:28.615502 [info ] [Thread-3  ]: 3 of 3 START sql view model analytics_staging.stg_products ..................... [RUN]
+[0m10:05:28.617943 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_airflow_analytics_analytics, now model.ecommerce_analytics.stg_customers)
+[0m10:05:28.620474 [debug] [Thread-2  ]: Re-using an available connection from the pool (formerly list_airflow_analytics_staging, now model.ecommerce_analytics.stg_orders)
+[0m10:05:28.623278 [debug] [Thread-3  ]: Acquiring new postgres connection 'model.ecommerce_analytics.stg_products'
+[0m10:05:28.625411 [debug] [Thread-1  ]: Began compiling node model.ecommerce_analytics.stg_customers
+[0m10:05:28.626922 [debug] [Thread-2  ]: Began compiling node model.ecommerce_analytics.stg_orders
+[0m10:05:28.628912 [debug] [Thread-3  ]: Began compiling node model.ecommerce_analytics.stg_products
+[0m10:05:28.645422 [debug] [Thread-2  ]: Writing injected SQL for node "model.ecommerce_analytics.stg_orders"
+[0m10:05:28.651672 [debug] [Thread-1  ]: Writing injected SQL for node "model.ecommerce_analytics.stg_customers"
+[0m10:05:28.659009 [debug] [Thread-3  ]: Writing injected SQL for node "model.ecommerce_analytics.stg_products"
+[0m10:05:28.674439 [debug] [Thread-2  ]: Timing info for model.ecommerce_analytics.stg_orders (compile): 10:05:28.641848 => 10:05:28.673530
+[0m10:05:28.676276 [debug] [Thread-2  ]: Began executing node model.ecommerce_analytics.stg_orders
+[0m10:05:28.677781 [debug] [Thread-3  ]: Timing info for model.ecommerce_analytics.stg_products (compile): 10:05:28.653042 => 10:05:28.677259
+[0m10:05:28.691170 [debug] [Thread-3  ]: Began executing node model.ecommerce_analytics.stg_products
+[0m10:05:28.697817 [debug] [Thread-1  ]: Timing info for model.ecommerce_analytics.stg_customers (compile): 10:05:28.630452 => 10:05:28.697207
+[0m10:05:28.719718 [debug] [Thread-1  ]: Began executing node model.ecommerce_analytics.stg_customers
+[0m10:05:28.861390 [debug] [Thread-3  ]: Writing runtime sql for node "model.ecommerce_analytics.stg_products"
+[0m10:05:28.863930 [debug] [Thread-1  ]: Writing runtime sql for node "model.ecommerce_analytics.stg_customers"
+[0m10:05:28.867062 [debug] [Thread-2  ]: Writing runtime sql for node "model.ecommerce_analytics.stg_orders"
+[0m10:05:28.879607 [debug] [Thread-1  ]: Using postgres connection "model.ecommerce_analytics.stg_customers"
+[0m10:05:28.881013 [debug] [Thread-3  ]: Using postgres connection "model.ecommerce_analytics.stg_products"
+[0m10:05:28.882639 [debug] [Thread-1  ]: On model.ecommerce_analytics.stg_customers: BEGIN
+[0m10:05:28.884586 [debug] [Thread-3  ]: On model.ecommerce_analytics.stg_products: BEGIN
+[0m10:05:28.885811 [debug] [Thread-2  ]: Using postgres connection "model.ecommerce_analytics.stg_orders"
+[0m10:05:28.886836 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m10:05:28.888140 [debug] [Thread-3  ]: Opening a new connection, currently in state init
+[0m10:05:28.889583 [debug] [Thread-2  ]: On model.ecommerce_analytics.stg_orders: BEGIN
+[0m10:05:28.892594 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
+[0m10:05:28.904983 [debug] [Thread-3  ]: SQL status: BEGIN in 0.0 seconds
+[0m10:05:28.907987 [debug] [Thread-3  ]: Using postgres connection "model.ecommerce_analytics.stg_products"
+[0m10:05:28.909833 [debug] [Thread-1  ]: SQL status: BEGIN in 0.0 seconds
+[0m10:05:28.911718 [debug] [Thread-3  ]: On model.ecommerce_analytics.stg_products: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "node_id": "model.ecommerce_analytics.stg_products"} */
+
+  create view "airflow"."analytics_staging"."stg_products__dbt_tmp"
+    
+    
+  as (
+    -- Staging model for products
+-- Reads from staging schema loaded by PySpark ETL
+
+with source as (
+    select * from staging.products
+),
+
+renamed as (
+    select
+        product_id,
+        product_name,
+        category,
+        brand,
+        cost_price,
+        selling_price,
+        stock_quantity,
+        profit_margin_pct,
+        ingested_at
+    from source
+    where product_id is not null
+      and selling_price > 0
+)
+
+select * from renamed
+  );
+[0m10:05:28.913591 [debug] [Thread-2  ]: SQL status: BEGIN in 0.0 seconds
+[0m10:05:28.915708 [debug] [Thread-1  ]: Using postgres connection "model.ecommerce_analytics.stg_customers"
+[0m10:05:28.919580 [debug] [Thread-2  ]: Using postgres connection "model.ecommerce_analytics.stg_orders"
+[0m10:05:28.923462 [debug] [Thread-1  ]: On model.ecommerce_analytics.stg_customers: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "node_id": "model.ecommerce_analytics.stg_customers"} */
+
+  create view "airflow"."analytics_staging"."stg_customers__dbt_tmp"
+    
+    
+  as (
+    -- Staging model for customers
+-- Reads from staging schema loaded by PySpark ETL
+
+with source as (
+    select * from staging.customers
+),
+
+renamed as (
+    select
+        customer_id,
+        name         as customer_name,
+        email,
+        city,
+        state,
+        signup_date,
+        segment,
+        ingested_at
+    from source
+    where customer_id is not null
+      and email is not null
+)
+
+select * from renamed
+  );
+[0m10:05:28.926741 [debug] [Thread-2  ]: On model.ecommerce_analytics.stg_orders: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "node_id": "model.ecommerce_analytics.stg_orders"} */
+
+  create view "airflow"."analytics_staging"."stg_orders__dbt_tmp"
+    
+    
+  as (
+    -- Staging model for orders
+-- Reads from staging schema loaded by PySpark ETL
+
+with source as (
+    select * from staging.orders
+),
+
+renamed as (
+    select
+        order_id,
+        customer_id,
+        product_id,
+        order_date,
+        quantity,
+        unit_price,
+        total_amount,
+        lower(status) as status,
+        ingested_at
+    from source
+    where order_id is not null
+      and customer_id is not null
+      and product_id is not null
+)
+
+select * from renamed
+  );
+[0m10:05:28.933318 [debug] [Thread-1  ]: SQL status: CREATE VIEW in 0.0 seconds
+[0m10:05:28.942098 [debug] [Thread-3  ]: SQL status: CREATE VIEW in 0.0 seconds
+[0m10:05:28.954353 [debug] [Thread-1  ]: Using postgres connection "model.ecommerce_analytics.stg_customers"
+[0m10:05:28.957650 [debug] [Thread-3  ]: Using postgres connection "model.ecommerce_analytics.stg_products"
+[0m10:05:28.958697 [debug] [Thread-2  ]: SQL status: CREATE VIEW in 0.0 seconds
+[0m10:05:28.959798 [debug] [Thread-1  ]: On model.ecommerce_analytics.stg_customers: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "node_id": "model.ecommerce_analytics.stg_customers"} */
+alter table "airflow"."analytics_staging"."stg_customers__dbt_tmp" rename to "stg_customers"
+[0m10:05:28.961420 [debug] [Thread-3  ]: On model.ecommerce_analytics.stg_products: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "node_id": "model.ecommerce_analytics.stg_products"} */
+alter table "airflow"."analytics_staging"."stg_products__dbt_tmp" rename to "stg_products"
+[0m10:05:28.971007 [debug] [Thread-2  ]: Using postgres connection "model.ecommerce_analytics.stg_orders"
+[0m10:05:28.973190 [debug] [Thread-2  ]: On model.ecommerce_analytics.stg_orders: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "node_id": "model.ecommerce_analytics.stg_orders"} */
+alter table "airflow"."analytics_staging"."stg_orders__dbt_tmp" rename to "stg_orders"
+[0m10:05:28.975714 [debug] [Thread-3  ]: SQL status: ALTER TABLE in 0.0 seconds
+[0m10:05:28.977019 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.0 seconds
+[0m10:05:28.978097 [debug] [Thread-2  ]: SQL status: ALTER TABLE in 0.0 seconds
+[0m10:05:29.041028 [debug] [Thread-2  ]: On model.ecommerce_analytics.stg_orders: COMMIT
+[0m10:05:29.043065 [debug] [Thread-3  ]: On model.ecommerce_analytics.stg_products: COMMIT
+[0m10:05:29.044202 [debug] [Thread-1  ]: On model.ecommerce_analytics.stg_customers: COMMIT
+[0m10:05:29.045393 [debug] [Thread-2  ]: Using postgres connection "model.ecommerce_analytics.stg_orders"
+[0m10:05:29.046811 [debug] [Thread-3  ]: Using postgres connection "model.ecommerce_analytics.stg_products"
+[0m10:05:29.048586 [debug] [Thread-1  ]: Using postgres connection "model.ecommerce_analytics.stg_customers"
+[0m10:05:29.050557 [debug] [Thread-2  ]: On model.ecommerce_analytics.stg_orders: COMMIT
+[0m10:05:29.052152 [debug] [Thread-3  ]: On model.ecommerce_analytics.stg_products: COMMIT
+[0m10:05:29.053871 [debug] [Thread-1  ]: On model.ecommerce_analytics.stg_customers: COMMIT
+[0m10:05:29.057085 [debug] [Thread-2  ]: SQL status: COMMIT in 0.0 seconds
+[0m10:05:29.058191 [debug] [Thread-3  ]: SQL status: COMMIT in 0.0 seconds
+[0m10:05:29.059276 [debug] [Thread-1  ]: SQL status: COMMIT in 0.0 seconds
+[0m10:05:29.078270 [debug] [Thread-2  ]: Applying DROP to: "airflow"."analytics_staging"."stg_orders__dbt_backup"
+[0m10:05:29.081483 [debug] [Thread-3  ]: Applying DROP to: "airflow"."analytics_staging"."stg_products__dbt_backup"
+[0m10:05:29.090488 [debug] [Thread-1  ]: Applying DROP to: "airflow"."analytics_staging"."stg_customers__dbt_backup"
+[0m10:05:29.103695 [debug] [Thread-3  ]: Using postgres connection "model.ecommerce_analytics.stg_products"
+[0m10:05:29.101790 [debug] [Thread-2  ]: Using postgres connection "model.ecommerce_analytics.stg_orders"
+[0m10:05:29.106960 [debug] [Thread-1  ]: Using postgres connection "model.ecommerce_analytics.stg_customers"
+[0m10:05:29.108627 [debug] [Thread-3  ]: On model.ecommerce_analytics.stg_products: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "node_id": "model.ecommerce_analytics.stg_products"} */
+drop view if exists "airflow"."analytics_staging"."stg_products__dbt_backup" cascade
+[0m10:05:29.110343 [debug] [Thread-2  ]: On model.ecommerce_analytics.stg_orders: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "node_id": "model.ecommerce_analytics.stg_orders"} */
+drop view if exists "airflow"."analytics_staging"."stg_orders__dbt_backup" cascade
+[0m10:05:29.111918 [debug] [Thread-1  ]: On model.ecommerce_analytics.stg_customers: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "node_id": "model.ecommerce_analytics.stg_customers"} */
+drop view if exists "airflow"."analytics_staging"."stg_customers__dbt_backup" cascade
+[0m10:05:29.117044 [debug] [Thread-2  ]: SQL status: DROP VIEW in 0.0 seconds
+[0m10:05:29.118484 [debug] [Thread-1  ]: SQL status: DROP VIEW in 0.0 seconds
+[0m10:05:29.119599 [debug] [Thread-3  ]: SQL status: DROP VIEW in 0.0 seconds
+[0m10:05:29.122849 [debug] [Thread-2  ]: Timing info for model.ecommerce_analytics.stg_orders (execute): 10:05:28.678561 => 10:05:29.122353
+[0m10:05:29.126539 [debug] [Thread-1  ]: Timing info for model.ecommerce_analytics.stg_customers (execute): 10:05:28.732224 => 10:05:29.126061
+[0m10:05:29.129981 [debug] [Thread-3  ]: Timing info for model.ecommerce_analytics.stg_products (execute): 10:05:28.708331 => 10:05:29.129509
+[0m10:05:29.131991 [debug] [Thread-2  ]: On model.ecommerce_analytics.stg_orders: Close
+[0m10:05:29.134358 [debug] [Thread-1  ]: On model.ecommerce_analytics.stg_customers: Close
+[0m10:05:29.136583 [debug] [Thread-3  ]: On model.ecommerce_analytics.stg_products: Close
+[0m10:05:29.139487 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '22f1ae0a-8bf2-4ed4-b420-66a859b1620a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x713fa215a850>]}
+[0m10:05:29.142410 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '22f1ae0a-8bf2-4ed4-b420-66a859b1620a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x713fa1da59d0>]}
+[0m10:05:29.144804 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '22f1ae0a-8bf2-4ed4-b420-66a859b1620a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x713fa1d9d370>]}
+[0m10:05:29.146518 [info ] [Thread-2  ]: 2 of 3 OK created sql view model analytics_staging.stg_orders .................. [[32mCREATE VIEW[0m in 0.52s]
+[0m10:05:29.149212 [info ] [Thread-1  ]: 1 of 3 OK created sql view model analytics_staging.stg_customers ............... [[32mCREATE VIEW[0m in 0.52s]
+[0m10:05:29.152095 [info ] [Thread-3  ]: 3 of 3 OK created sql view model analytics_staging.stg_products ................ [[32mCREATE VIEW[0m in 0.52s]
+[0m10:05:29.154126 [debug] [Thread-2  ]: Finished running node model.ecommerce_analytics.stg_orders
+[0m10:05:29.156016 [debug] [Thread-1  ]: Finished running node model.ecommerce_analytics.stg_customers
+[0m10:05:29.158120 [debug] [Thread-3  ]: Finished running node model.ecommerce_analytics.stg_products
+[0m10:05:29.164090 [debug] [MainThread]: Using postgres connection "master"
+[0m10:05:29.165864 [debug] [MainThread]: On master: BEGIN
+[0m10:05:29.167506 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m10:05:29.185463 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m10:05:29.186881 [debug] [MainThread]: On master: COMMIT
+[0m10:05:29.188508 [debug] [MainThread]: Using postgres connection "master"
+[0m10:05:29.189800 [debug] [MainThread]: On master: COMMIT
+[0m10:05:29.191417 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m10:05:29.192768 [debug] [MainThread]: On master: Close
+[0m10:05:29.194667 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:05:29.195984 [debug] [MainThread]: Connection 'model.ecommerce_analytics.stg_orders' was properly closed.
+[0m10:05:29.197245 [debug] [MainThread]: Connection 'model.ecommerce_analytics.stg_customers' was properly closed.
+[0m10:05:29.198766 [debug] [MainThread]: Connection 'model.ecommerce_analytics.stg_products' was properly closed.
+[0m10:05:29.200881 [info ] [MainThread]: 
+[0m10:05:29.202430 [info ] [MainThread]: Finished running 3 view models in 0 hours 0 minutes and 0.85 seconds (0.85s).
+[0m10:05:29.205373 [debug] [MainThread]: Command end result
+[0m10:05:29.252983 [info ] [MainThread]: 
+[0m10:05:29.254550 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m10:05:29.255952 [info ] [MainThread]: 
+[0m10:05:29.257460 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+[0m10:05:29.260682 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 2.557172, "process_user_time": 6.547847, "process_kernel_time": 1.539006, "process_mem_max_rss": "124964", "process_in_blocks": "40824", "process_out_blocks": "0"}
+[0m10:05:29.262412 [debug] [MainThread]: Command `dbt run` succeeded at 10:05:29.262099 after 2.56 seconds
+[0m10:05:29.263739 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x713fa55193d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x713fa245d0d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x713fa2474fd0>]}
+[0m10:05:29.265491 [debug] [MainThread]: Flushing usage events
+[0m10:05:29.633017 [debug] [MainThread]: Error sending anonymous usage statistics. Disabling tracking for this execution. If you wish to permanently disable tracking, see: https://docs.getdbt.com/reference/global-configs#send-anonymous-usage-stats.
+[0m10:05:35.819611 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7961f41ae130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7961f1f90700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7961f1f906a0>]}
+
+
+============================== 10:05:35.831633 | 48f03002-b6d4-482e-b76f-e651dd55bddb ==============================
+[0m10:05:35.831633 [info ] [MainThread]: Running with dbt=1.7.0
+[0m10:05:35.833944 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '.', 'debug': 'False', 'version_check': 'True', 'log_path': '/opt/airflow/dbt_project/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt test --select staging --profiles-dir .', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m10:05:36.275836 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '48f03002-b6d4-482e-b76f-e651dd55bddb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7961f1fa7550>]}
+[0m10:05:36.449443 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '48f03002-b6d4-482e-b76f-e651dd55bddb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7961f204cd30>]}
+[0m10:05:36.451151 [info ] [MainThread]: Registered adapter: postgres=1.7.0
+[0m10:05:36.478379 [debug] [MainThread]: checksum: 8434eacd4ffdf0ca3ab22bf0e2d55b45306c9599613e842b959405abc489e606, vars: {}, profile: , target: , version: 1.7.0
+[0m10:05:36.802091 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m10:05:36.803416 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m10:05:36.815559 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '48f03002-b6d4-482e-b76f-e651dd55bddb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7961f1074eb0>]}
+[0m10:05:36.872361 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '48f03002-b6d4-482e-b76f-e651dd55bddb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7961f112ac40>]}
+[0m10:05:36.873570 [info ] [MainThread]: Found 6 models, 17 tests, 0 sources, 0 exposures, 0 metrics, 401 macros, 0 groups, 0 semantic models
+[0m10:05:36.874789 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '48f03002-b6d4-482e-b76f-e651dd55bddb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7961f112af40>]}
+[0m10:05:36.878219 [info ] [MainThread]: 
+[0m10:05:36.879921 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m10:05:36.882817 [debug] [ThreadPool]: Acquiring new postgres connection 'list_airflow_analytics_analytics'
+[0m10:05:36.884418 [debug] [ThreadPool]: Acquiring new postgres connection 'list_airflow_analytics_staging'
+[0m10:05:36.903096 [debug] [ThreadPool]: Using postgres connection "list_airflow_analytics_analytics"
+[0m10:05:36.907398 [debug] [ThreadPool]: Using postgres connection "list_airflow_analytics_staging"
+[0m10:05:36.908838 [debug] [ThreadPool]: On list_airflow_analytics_analytics: BEGIN
+[0m10:05:36.910267 [debug] [ThreadPool]: On list_airflow_analytics_staging: BEGIN
+[0m10:05:36.911527 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:05:36.912777 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:05:36.925485 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m10:05:36.927108 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m10:05:36.928510 [debug] [ThreadPool]: Using postgres connection "list_airflow_analytics_staging"
+[0m10:05:36.929733 [debug] [ThreadPool]: Using postgres connection "list_airflow_analytics_analytics"
+[0m10:05:36.931087 [debug] [ThreadPool]: On list_airflow_analytics_staging: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "connection_name": "list_airflow_analytics_staging"} */
+select
+      'airflow' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics_staging'
+    union all
+    select
+      'airflow' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics_staging'
+    union all
+    select
+      'airflow' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics_staging'
+  
+[0m10:05:36.932558 [debug] [ThreadPool]: On list_airflow_analytics_analytics: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "connection_name": "list_airflow_analytics_analytics"} */
+select
+      'airflow' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics_analytics'
+    union all
+    select
+      'airflow' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics_analytics'
+    union all
+    select
+      'airflow' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics_analytics'
+  
+[0m10:05:36.937745 [debug] [ThreadPool]: SQL status: SELECT 3 in 0.0 seconds
+[0m10:05:36.938589 [debug] [ThreadPool]: SQL status: SELECT 3 in 0.0 seconds
+[0m10:05:36.940953 [debug] [ThreadPool]: On list_airflow_analytics_staging: ROLLBACK
+[0m10:05:36.943609 [debug] [ThreadPool]: On list_airflow_analytics_analytics: ROLLBACK
+[0m10:05:36.945374 [debug] [ThreadPool]: On list_airflow_analytics_staging: Close
+[0m10:05:36.946454 [debug] [ThreadPool]: On list_airflow_analytics_analytics: Close
+[0m10:05:36.957959 [debug] [MainThread]: Using postgres connection "master"
+[0m10:05:36.959397 [debug] [MainThread]: On master: BEGIN
+[0m10:05:36.960605 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:05:36.971815 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m10:05:36.973318 [debug] [MainThread]: Using postgres connection "master"
+[0m10:05:36.974737 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m10:05:37.007703 [debug] [MainThread]: SQL status: SELECT 3 in 0.0 seconds
+[0m10:05:37.010776 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '48f03002-b6d4-482e-b76f-e651dd55bddb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7961f0d9be80>]}
+[0m10:05:37.012487 [debug] [MainThread]: On master: ROLLBACK
+[0m10:05:37.013957 [debug] [MainThread]: Using postgres connection "master"
+[0m10:05:37.015005 [debug] [MainThread]: On master: BEGIN
+[0m10:05:37.016616 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m10:05:37.017943 [debug] [MainThread]: On master: COMMIT
+[0m10:05:37.019108 [debug] [MainThread]: Using postgres connection "master"
+[0m10:05:37.020217 [debug] [MainThread]: On master: COMMIT
+[0m10:05:37.021592 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m10:05:37.022794 [debug] [MainThread]: On master: Close
+[0m10:05:37.024403 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m10:05:37.025700 [info ] [MainThread]: 
+[0m10:05:37.038239 [debug] [Thread-1  ]: Began running node test.ecommerce_analytics.accepted_values_stg_orders_status__completed__cancelled__pending.ee383a7b32
+[0m10:05:37.039201 [debug] [Thread-2  ]: Began running node test.ecommerce_analytics.not_null_stg_customers_customer_id.e2cfb1f9aa
+[0m10:05:37.040081 [debug] [Thread-3  ]: Began running node test.ecommerce_analytics.not_null_stg_customers_email.d7cf761533
+[0m10:05:37.040964 [info ] [Thread-1  ]: 1 of 11 START test accepted_values_stg_orders_status__completed__cancelled__pending  [RUN]
+[0m10:05:37.042209 [debug] [Thread-4  ]: Began running node test.ecommerce_analytics.not_null_stg_orders_customer_id.af79d5e4b5
+[0m10:05:37.043165 [info ] [Thread-2  ]: 2 of 11 START test not_null_stg_customers_customer_id .......................... [RUN]
+[0m10:05:37.044950 [info ] [Thread-3  ]: 3 of 11 START test not_null_stg_customers_email ................................ [RUN]
+[0m10:05:37.046887 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_airflow_analytics_analytics, now test.ecommerce_analytics.accepted_values_stg_orders_status__completed__cancelled__pending.ee383a7b32)
+[0m10:05:37.048276 [info ] [Thread-4  ]: 4 of 11 START test not_null_stg_orders_customer_id ............................. [RUN]
+[0m10:05:37.050100 [debug] [Thread-2  ]: Re-using an available connection from the pool (formerly list_airflow_analytics_staging, now test.ecommerce_analytics.not_null_stg_customers_customer_id.e2cfb1f9aa)
+[0m10:05:37.051866 [debug] [Thread-3  ]: Acquiring new postgres connection 'test.ecommerce_analytics.not_null_stg_customers_email.d7cf761533'
+[0m10:05:37.053128 [debug] [Thread-1  ]: Began compiling node test.ecommerce_analytics.accepted_values_stg_orders_status__completed__cancelled__pending.ee383a7b32
+[0m10:05:37.054784 [debug] [Thread-4  ]: Acquiring new postgres connection 'test.ecommerce_analytics.not_null_stg_orders_customer_id.af79d5e4b5'
+[0m10:05:37.056064 [debug] [Thread-2  ]: Began compiling node test.ecommerce_analytics.not_null_stg_customers_customer_id.e2cfb1f9aa
+[0m10:05:37.057651 [debug] [Thread-3  ]: Began compiling node test.ecommerce_analytics.not_null_stg_customers_email.d7cf761533
+[0m10:05:37.070290 [debug] [Thread-4  ]: Began compiling node test.ecommerce_analytics.not_null_stg_orders_customer_id.af79d5e4b5
+[0m10:05:37.110703 [debug] [Thread-1  ]: Writing injected SQL for node "test.ecommerce_analytics.accepted_values_stg_orders_status__completed__cancelled__pending.ee383a7b32"
+[0m10:05:37.116689 [debug] [Thread-3  ]: Writing injected SQL for node "test.ecommerce_analytics.not_null_stg_customers_email.d7cf761533"
+[0m10:05:37.117917 [debug] [Thread-2  ]: Writing injected SQL for node "test.ecommerce_analytics.not_null_stg_customers_customer_id.e2cfb1f9aa"
+[0m10:05:37.125120 [debug] [Thread-4  ]: Writing injected SQL for node "test.ecommerce_analytics.not_null_stg_orders_customer_id.af79d5e4b5"
+[0m10:05:37.138390 [debug] [Thread-3  ]: Timing info for test.ecommerce_analytics.not_null_stg_customers_email.d7cf761533 (compile): 10:05:37.097214 => 10:05:37.137727
+[0m10:05:37.139592 [debug] [Thread-4  ]: Timing info for test.ecommerce_analytics.not_null_stg_orders_customer_id.af79d5e4b5 (compile): 10:05:37.118480 => 10:05:37.139110
+[0m10:05:37.140632 [debug] [Thread-3  ]: Began executing node test.ecommerce_analytics.not_null_stg_customers_email.d7cf761533
+[0m10:05:37.142092 [debug] [Thread-4  ]: Began executing node test.ecommerce_analytics.not_null_stg_orders_customer_id.af79d5e4b5
+[0m10:05:37.143359 [debug] [Thread-2  ]: Timing info for test.ecommerce_analytics.not_null_stg_customers_customer_id.e2cfb1f9aa (compile): 10:05:37.086163 => 10:05:37.142852
+[0m10:05:37.150206 [debug] [Thread-1  ]: Timing info for test.ecommerce_analytics.accepted_values_stg_orders_status__completed__cancelled__pending.ee383a7b32 (compile): 10:05:37.058885 => 10:05:37.149684
+[0m10:05:37.181322 [debug] [Thread-3  ]: Writing runtime sql for node "test.ecommerce_analytics.not_null_stg_customers_email.d7cf761533"
+[0m10:05:37.190568 [debug] [Thread-4  ]: Writing runtime sql for node "test.ecommerce_analytics.not_null_stg_orders_customer_id.af79d5e4b5"
+[0m10:05:37.191593 [debug] [Thread-2  ]: Began executing node test.ecommerce_analytics.not_null_stg_customers_customer_id.e2cfb1f9aa
+[0m10:05:37.193712 [debug] [Thread-1  ]: Began executing node test.ecommerce_analytics.accepted_values_stg_orders_status__completed__cancelled__pending.ee383a7b32
+[0m10:05:37.200772 [debug] [Thread-2  ]: Writing runtime sql for node "test.ecommerce_analytics.not_null_stg_customers_customer_id.e2cfb1f9aa"
+[0m10:05:37.206105 [debug] [Thread-1  ]: Writing runtime sql for node "test.ecommerce_analytics.accepted_values_stg_orders_status__completed__cancelled__pending.ee383a7b32"
+[0m10:05:37.210518 [debug] [Thread-3  ]: Using postgres connection "test.ecommerce_analytics.not_null_stg_customers_email.d7cf761533"
+[0m10:05:37.212610 [debug] [Thread-3  ]: On test.ecommerce_analytics.not_null_stg_customers_email.d7cf761533: BEGIN
+[0m10:05:37.213779 [debug] [Thread-4  ]: Using postgres connection "test.ecommerce_analytics.not_null_stg_orders_customer_id.af79d5e4b5"
+[0m10:05:37.214884 [debug] [Thread-3  ]: Opening a new connection, currently in state init
+[0m10:05:37.216362 [debug] [Thread-4  ]: On test.ecommerce_analytics.not_null_stg_orders_customer_id.af79d5e4b5: BEGIN
+[0m10:05:37.218831 [debug] [Thread-2  ]: Using postgres connection "test.ecommerce_analytics.not_null_stg_customers_customer_id.e2cfb1f9aa"
+[0m10:05:37.220061 [debug] [Thread-4  ]: Opening a new connection, currently in state init
+[0m10:05:37.221708 [debug] [Thread-1  ]: Using postgres connection "test.ecommerce_analytics.accepted_values_stg_orders_status__completed__cancelled__pending.ee383a7b32"
+[0m10:05:37.222920 [debug] [Thread-2  ]: On test.ecommerce_analytics.not_null_stg_customers_customer_id.e2cfb1f9aa: BEGIN
+[0m10:05:37.225239 [debug] [Thread-1  ]: On test.ecommerce_analytics.accepted_values_stg_orders_status__completed__cancelled__pending.ee383a7b32: BEGIN
+[0m10:05:37.227068 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
+[0m10:05:37.229250 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m10:05:37.231600 [debug] [Thread-3  ]: SQL status: BEGIN in 0.0 seconds
+[0m10:05:37.234044 [debug] [Thread-3  ]: Using postgres connection "test.ecommerce_analytics.not_null_stg_customers_email.d7cf761533"
+[0m10:05:37.235950 [debug] [Thread-3  ]: On test.ecommerce_analytics.not_null_stg_customers_email.d7cf761533: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "node_id": "test.ecommerce_analytics.not_null_stg_customers_email.d7cf761533"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select email
+from "airflow"."analytics_staging"."stg_customers"
+where email is null
+
+
+
+      
+    ) dbt_internal_test
+[0m10:05:37.238238 [debug] [Thread-4  ]: SQL status: BEGIN in 0.0 seconds
+[0m10:05:37.239792 [debug] [Thread-3  ]: SQL status: SELECT 1 in 0.0 seconds
+[0m10:05:37.241080 [debug] [Thread-4  ]: Using postgres connection "test.ecommerce_analytics.not_null_stg_orders_customer_id.af79d5e4b5"
+[0m10:05:37.247178 [debug] [Thread-3  ]: Timing info for test.ecommerce_analytics.not_null_stg_customers_email.d7cf761533 (execute): 10:05:37.144067 => 10:05:37.246570
+[0m10:05:37.249387 [debug] [Thread-2  ]: SQL status: BEGIN in 0.0 seconds
+[0m10:05:37.250703 [debug] [Thread-4  ]: On test.ecommerce_analytics.not_null_stg_orders_customer_id.af79d5e4b5: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "node_id": "test.ecommerce_analytics.not_null_stg_orders_customer_id.af79d5e4b5"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select customer_id
+from "airflow"."analytics_staging"."stg_orders"
+where customer_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m10:05:37.252147 [debug] [Thread-1  ]: SQL status: BEGIN in 0.0 seconds
+[0m10:05:37.253950 [debug] [Thread-3  ]: On test.ecommerce_analytics.not_null_stg_customers_email.d7cf761533: ROLLBACK
+[0m10:05:37.255440 [debug] [Thread-2  ]: Using postgres connection "test.ecommerce_analytics.not_null_stg_customers_customer_id.e2cfb1f9aa"
+[0m10:05:37.257732 [debug] [Thread-1  ]: Using postgres connection "test.ecommerce_analytics.accepted_values_stg_orders_status__completed__cancelled__pending.ee383a7b32"
+[0m10:05:37.259540 [debug] [Thread-4  ]: SQL status: SELECT 1 in 0.0 seconds
+[0m10:05:37.261474 [debug] [Thread-3  ]: On test.ecommerce_analytics.not_null_stg_customers_email.d7cf761533: Close
+[0m10:05:37.263095 [debug] [Thread-2  ]: On test.ecommerce_analytics.not_null_stg_customers_customer_id.e2cfb1f9aa: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "node_id": "test.ecommerce_analytics.not_null_stg_customers_customer_id.e2cfb1f9aa"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select customer_id
+from "airflow"."analytics_staging"."stg_customers"
+where customer_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m10:05:37.264859 [debug] [Thread-1  ]: On test.ecommerce_analytics.accepted_values_stg_orders_status__completed__cancelled__pending.ee383a7b32: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "node_id": "test.ecommerce_analytics.accepted_values_stg_orders_status__completed__cancelled__pending.ee383a7b32"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        status as value_field,
+        count(*) as n_records
+
+    from "airflow"."analytics_staging"."stg_orders"
+    group by status
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'completed','cancelled','pending'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m10:05:37.269158 [debug] [Thread-4  ]: Timing info for test.ecommerce_analytics.not_null_stg_orders_customer_id.af79d5e4b5 (execute): 10:05:37.160436 => 10:05:37.268618
+[0m10:05:37.271596 [info ] [Thread-3  ]: 3 of 11 PASS not_null_stg_customers_email ...................................... [[32mPASS[0m in 0.22s]
+[0m10:05:37.275561 [debug] [Thread-2  ]: SQL status: SELECT 1 in 0.0 seconds
+[0m10:05:37.278643 [debug] [Thread-4  ]: On test.ecommerce_analytics.not_null_stg_orders_customer_id.af79d5e4b5: ROLLBACK
+[0m10:05:37.281171 [debug] [Thread-3  ]: Finished running node test.ecommerce_analytics.not_null_stg_customers_email.d7cf761533
+[0m10:05:37.284823 [debug] [Thread-2  ]: Timing info for test.ecommerce_analytics.not_null_stg_customers_customer_id.e2cfb1f9aa (execute): 10:05:37.196478 => 10:05:37.284126
+[0m10:05:37.286045 [debug] [Thread-1  ]: SQL status: SELECT 1 in 0.0 seconds
+[0m10:05:37.287577 [debug] [Thread-4  ]: On test.ecommerce_analytics.not_null_stg_orders_customer_id.af79d5e4b5: Close
+[0m10:05:37.288862 [debug] [Thread-3  ]: Began running node test.ecommerce_analytics.not_null_stg_orders_order_id.81cfe2fe64
+[0m10:05:37.290543 [debug] [Thread-2  ]: On test.ecommerce_analytics.not_null_stg_customers_customer_id.e2cfb1f9aa: ROLLBACK
+[0m10:05:37.295541 [debug] [Thread-1  ]: Timing info for test.ecommerce_analytics.accepted_values_stg_orders_status__completed__cancelled__pending.ee383a7b32 (execute): 10:05:37.201964 => 10:05:37.294412
+[0m10:05:37.298663 [info ] [Thread-4  ]: 4 of 11 PASS not_null_stg_orders_customer_id ................................... [[32mPASS[0m in 0.24s]
+[0m10:05:37.300141 [info ] [Thread-3  ]: 5 of 11 START test not_null_stg_orders_order_id ................................ [RUN]
+[0m10:05:37.302505 [debug] [Thread-2  ]: On test.ecommerce_analytics.not_null_stg_customers_customer_id.e2cfb1f9aa: Close
+[0m10:05:37.303589 [debug] [Thread-1  ]: On test.ecommerce_analytics.accepted_values_stg_orders_status__completed__cancelled__pending.ee383a7b32: ROLLBACK
+[0m10:05:37.305629 [debug] [Thread-4  ]: Finished running node test.ecommerce_analytics.not_null_stg_orders_customer_id.af79d5e4b5
+[0m10:05:37.307763 [debug] [Thread-3  ]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.not_null_stg_customers_email.d7cf761533, now test.ecommerce_analytics.not_null_stg_orders_order_id.81cfe2fe64)
+[0m10:05:37.310909 [info ] [Thread-2  ]: 2 of 11 PASS not_null_stg_customers_customer_id ................................ [[32mPASS[0m in 0.26s]
+[0m10:05:37.313350 [debug] [Thread-1  ]: On test.ecommerce_analytics.accepted_values_stg_orders_status__completed__cancelled__pending.ee383a7b32: Close
+[0m10:05:37.314968 [debug] [Thread-4  ]: Began running node test.ecommerce_analytics.not_null_stg_orders_product_id.034adb910e
+[0m10:05:37.316551 [debug] [Thread-3  ]: Began compiling node test.ecommerce_analytics.not_null_stg_orders_order_id.81cfe2fe64
+[0m10:05:37.319040 [debug] [Thread-2  ]: Finished running node test.ecommerce_analytics.not_null_stg_customers_customer_id.e2cfb1f9aa
+[0m10:05:37.321524 [info ] [Thread-1  ]: 1 of 11 PASS accepted_values_stg_orders_status__completed__cancelled__pending .. [[32mPASS[0m in 0.27s]
+[0m10:05:37.322936 [info ] [Thread-4  ]: 6 of 11 START test not_null_stg_orders_product_id .............................. [RUN]
+[0m10:05:37.334480 [debug] [Thread-3  ]: Writing injected SQL for node "test.ecommerce_analytics.not_null_stg_orders_order_id.81cfe2fe64"
+[0m10:05:37.335669 [debug] [Thread-2  ]: Began running node test.ecommerce_analytics.not_null_stg_products_product_id.6373b0acf3
+[0m10:05:37.337680 [debug] [Thread-1  ]: Finished running node test.ecommerce_analytics.accepted_values_stg_orders_status__completed__cancelled__pending.ee383a7b32
+[0m10:05:37.339694 [debug] [Thread-4  ]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.not_null_stg_orders_customer_id.af79d5e4b5, now test.ecommerce_analytics.not_null_stg_orders_product_id.034adb910e)
+[0m10:05:37.342313 [info ] [Thread-2  ]: 7 of 11 START test not_null_stg_products_product_id ............................ [RUN]
+[0m10:05:37.344663 [debug] [Thread-1  ]: Began running node test.ecommerce_analytics.unique_stg_customers_customer_id.c7614daada
+[0m10:05:37.346571 [debug] [Thread-4  ]: Began compiling node test.ecommerce_analytics.not_null_stg_orders_product_id.034adb910e
+[0m10:05:37.348676 [debug] [Thread-2  ]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.not_null_stg_customers_customer_id.e2cfb1f9aa, now test.ecommerce_analytics.not_null_stg_products_product_id.6373b0acf3)
+[0m10:05:37.350371 [info ] [Thread-1  ]: 8 of 11 START test unique_stg_customers_customer_id ............................ [RUN]
+[0m10:05:37.361302 [debug] [Thread-4  ]: Writing injected SQL for node "test.ecommerce_analytics.not_null_stg_orders_product_id.034adb910e"
+[0m10:05:37.362397 [debug] [Thread-2  ]: Began compiling node test.ecommerce_analytics.not_null_stg_products_product_id.6373b0acf3
+[0m10:05:37.364538 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.accepted_values_stg_orders_status__completed__cancelled__pending.ee383a7b32, now test.ecommerce_analytics.unique_stg_customers_customer_id.c7614daada)
+[0m10:05:37.372393 [debug] [Thread-3  ]: Timing info for test.ecommerce_analytics.not_null_stg_orders_order_id.81cfe2fe64 (compile): 10:05:37.324511 => 10:05:37.371679
+[0m10:05:37.378971 [debug] [Thread-2  ]: Writing injected SQL for node "test.ecommerce_analytics.not_null_stg_products_product_id.6373b0acf3"
+[0m10:05:37.380043 [debug] [Thread-1  ]: Began compiling node test.ecommerce_analytics.unique_stg_customers_customer_id.c7614daada
+[0m10:05:37.381744 [debug] [Thread-3  ]: Began executing node test.ecommerce_analytics.not_null_stg_orders_order_id.81cfe2fe64
+[0m10:05:37.383755 [debug] [Thread-4  ]: Timing info for test.ecommerce_analytics.not_null_stg_orders_product_id.034adb910e (compile): 10:05:37.351802 => 10:05:37.383186
+[0m10:05:37.398402 [debug] [Thread-1  ]: Writing injected SQL for node "test.ecommerce_analytics.unique_stg_customers_customer_id.c7614daada"
+[0m10:05:37.403747 [debug] [Thread-3  ]: Writing runtime sql for node "test.ecommerce_analytics.not_null_stg_orders_order_id.81cfe2fe64"
+[0m10:05:37.405988 [debug] [Thread-4  ]: Began executing node test.ecommerce_analytics.not_null_stg_orders_product_id.034adb910e
+[0m10:05:37.409518 [debug] [Thread-2  ]: Timing info for test.ecommerce_analytics.not_null_stg_products_product_id.6373b0acf3 (compile): 10:05:37.366437 => 10:05:37.408572
+[0m10:05:37.415350 [debug] [Thread-4  ]: Writing runtime sql for node "test.ecommerce_analytics.not_null_stg_orders_product_id.034adb910e"
+[0m10:05:37.417384 [debug] [Thread-2  ]: Began executing node test.ecommerce_analytics.not_null_stg_products_product_id.6373b0acf3
+[0m10:05:37.424598 [debug] [Thread-2  ]: Writing runtime sql for node "test.ecommerce_analytics.not_null_stg_products_product_id.6373b0acf3"
+[0m10:05:37.426151 [debug] [Thread-1  ]: Timing info for test.ecommerce_analytics.unique_stg_customers_customer_id.c7614daada (compile): 10:05:37.384815 => 10:05:37.425526
+[0m10:05:37.428498 [debug] [Thread-1  ]: Began executing node test.ecommerce_analytics.unique_stg_customers_customer_id.c7614daada
+[0m10:05:37.430091 [debug] [Thread-3  ]: Using postgres connection "test.ecommerce_analytics.not_null_stg_orders_order_id.81cfe2fe64"
+[0m10:05:37.435669 [debug] [Thread-1  ]: Writing runtime sql for node "test.ecommerce_analytics.unique_stg_customers_customer_id.c7614daada"
+[0m10:05:37.438001 [debug] [Thread-3  ]: On test.ecommerce_analytics.not_null_stg_orders_order_id.81cfe2fe64: BEGIN
+[0m10:05:37.440649 [debug] [Thread-4  ]: Using postgres connection "test.ecommerce_analytics.not_null_stg_orders_product_id.034adb910e"
+[0m10:05:37.442644 [debug] [Thread-2  ]: Using postgres connection "test.ecommerce_analytics.not_null_stg_products_product_id.6373b0acf3"
+[0m10:05:37.443958 [debug] [Thread-3  ]: Opening a new connection, currently in state closed
+[0m10:05:37.445660 [debug] [Thread-4  ]: On test.ecommerce_analytics.not_null_stg_orders_product_id.034adb910e: BEGIN
+[0m10:05:37.447333 [debug] [Thread-2  ]: On test.ecommerce_analytics.not_null_stg_products_product_id.6373b0acf3: BEGIN
+[0m10:05:37.450109 [debug] [Thread-4  ]: Opening a new connection, currently in state closed
+[0m10:05:37.451999 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
+[0m10:05:37.459882 [debug] [Thread-1  ]: Using postgres connection "test.ecommerce_analytics.unique_stg_customers_customer_id.c7614daada"
+[0m10:05:37.461952 [debug] [Thread-1  ]: On test.ecommerce_analytics.unique_stg_customers_customer_id.c7614daada: BEGIN
+[0m10:05:37.463384 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m10:05:37.466782 [debug] [Thread-3  ]: SQL status: BEGIN in 0.0 seconds
+[0m10:05:37.469643 [debug] [Thread-3  ]: Using postgres connection "test.ecommerce_analytics.not_null_stg_orders_order_id.81cfe2fe64"
+[0m10:05:37.471811 [debug] [Thread-4  ]: SQL status: BEGIN in 0.0 seconds
+[0m10:05:37.473567 [debug] [Thread-3  ]: On test.ecommerce_analytics.not_null_stg_orders_order_id.81cfe2fe64: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "node_id": "test.ecommerce_analytics.not_null_stg_orders_order_id.81cfe2fe64"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select order_id
+from "airflow"."analytics_staging"."stg_orders"
+where order_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m10:05:37.475718 [debug] [Thread-2  ]: SQL status: BEGIN in 0.0 seconds
+[0m10:05:37.477183 [debug] [Thread-4  ]: Using postgres connection "test.ecommerce_analytics.not_null_stg_orders_product_id.034adb910e"
+[0m10:05:37.479698 [debug] [Thread-2  ]: Using postgres connection "test.ecommerce_analytics.not_null_stg_products_product_id.6373b0acf3"
+[0m10:05:37.481420 [debug] [Thread-3  ]: SQL status: SELECT 1 in 0.0 seconds
+[0m10:05:37.483021 [debug] [Thread-4  ]: On test.ecommerce_analytics.not_null_stg_orders_product_id.034adb910e: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "node_id": "test.ecommerce_analytics.not_null_stg_orders_product_id.034adb910e"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select product_id
+from "airflow"."analytics_staging"."stg_orders"
+where product_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m10:05:37.485003 [debug] [Thread-1  ]: SQL status: BEGIN in 0.0 seconds
+[0m10:05:37.486508 [debug] [Thread-2  ]: On test.ecommerce_analytics.not_null_stg_products_product_id.6373b0acf3: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "node_id": "test.ecommerce_analytics.not_null_stg_products_product_id.6373b0acf3"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select product_id
+from "airflow"."analytics_staging"."stg_products"
+where product_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m10:05:37.490841 [debug] [Thread-3  ]: Timing info for test.ecommerce_analytics.not_null_stg_orders_order_id.81cfe2fe64 (execute): 10:05:37.399138 => 10:05:37.490120
+[0m10:05:37.493306 [debug] [Thread-1  ]: Using postgres connection "test.ecommerce_analytics.unique_stg_customers_customer_id.c7614daada"
+[0m10:05:37.494617 [debug] [Thread-4  ]: SQL status: SELECT 1 in 0.0 seconds
+[0m10:05:37.496493 [debug] [Thread-3  ]: On test.ecommerce_analytics.not_null_stg_orders_order_id.81cfe2fe64: ROLLBACK
+[0m10:05:37.497829 [debug] [Thread-2  ]: SQL status: SELECT 1 in 0.0 seconds
+[0m10:05:37.498905 [debug] [Thread-1  ]: On test.ecommerce_analytics.unique_stg_customers_customer_id.c7614daada: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "node_id": "test.ecommerce_analytics.unique_stg_customers_customer_id.c7614daada"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    customer_id as unique_field,
+    count(*) as n_records
+
+from "airflow"."analytics_staging"."stg_customers"
+where customer_id is not null
+group by customer_id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m10:05:37.502626 [debug] [Thread-4  ]: Timing info for test.ecommerce_analytics.not_null_stg_orders_product_id.034adb910e (execute): 10:05:37.410408 => 10:05:37.502012
+[0m10:05:37.504724 [debug] [Thread-3  ]: On test.ecommerce_analytics.not_null_stg_orders_order_id.81cfe2fe64: Close
+[0m10:05:37.507902 [debug] [Thread-2  ]: Timing info for test.ecommerce_analytics.not_null_stg_products_product_id.6373b0acf3 (execute): 10:05:37.419462 => 10:05:37.507297
+[0m10:05:37.510357 [debug] [Thread-4  ]: On test.ecommerce_analytics.not_null_stg_orders_product_id.034adb910e: ROLLBACK
+[0m10:05:37.511605 [debug] [Thread-1  ]: SQL status: SELECT 1 in 0.0 seconds
+[0m10:05:37.513637 [info ] [Thread-3  ]: 5 of 11 PASS not_null_stg_orders_order_id ...................................... [[32mPASS[0m in 0.21s]
+[0m10:05:37.515267 [debug] [Thread-2  ]: On test.ecommerce_analytics.not_null_stg_products_product_id.6373b0acf3: ROLLBACK
+[0m10:05:37.517815 [debug] [Thread-4  ]: On test.ecommerce_analytics.not_null_stg_orders_product_id.034adb910e: Close
+[0m10:05:37.520932 [debug] [Thread-1  ]: Timing info for test.ecommerce_analytics.unique_stg_customers_customer_id.c7614daada (execute): 10:05:37.431020 => 10:05:37.520328
+[0m10:05:37.522858 [debug] [Thread-3  ]: Finished running node test.ecommerce_analytics.not_null_stg_orders_order_id.81cfe2fe64
+[0m10:05:37.524802 [debug] [Thread-2  ]: On test.ecommerce_analytics.not_null_stg_products_product_id.6373b0acf3: Close
+[0m10:05:37.528904 [debug] [Thread-1  ]: On test.ecommerce_analytics.unique_stg_customers_customer_id.c7614daada: ROLLBACK
+[0m10:05:37.527637 [info ] [Thread-4  ]: 6 of 11 PASS not_null_stg_orders_product_id .................................... [[32mPASS[0m in 0.19s]
+[0m10:05:37.531145 [debug] [Thread-3  ]: Began running node test.ecommerce_analytics.unique_stg_customers_email.1ebcb2333e
+[0m10:05:37.533951 [info ] [Thread-2  ]: 7 of 11 PASS not_null_stg_products_product_id .................................. [[32mPASS[0m in 0.19s]
+[0m10:05:37.536786 [debug] [Thread-1  ]: On test.ecommerce_analytics.unique_stg_customers_customer_id.c7614daada: Close
+[0m10:05:37.538216 [debug] [Thread-4  ]: Finished running node test.ecommerce_analytics.not_null_stg_orders_product_id.034adb910e
+[0m10:05:37.539614 [info ] [Thread-3  ]: 9 of 11 START test unique_stg_customers_email .................................. [RUN]
+[0m10:05:37.541610 [debug] [Thread-2  ]: Finished running node test.ecommerce_analytics.not_null_stg_products_product_id.6373b0acf3
+[0m10:05:37.546127 [debug] [Thread-4  ]: Began running node test.ecommerce_analytics.unique_stg_orders_order_id.e3b841c71a
+[0m10:05:37.544434 [info ] [Thread-1  ]: 8 of 11 PASS unique_stg_customers_customer_id .................................. [[32mPASS[0m in 0.18s]
+[0m10:05:37.548911 [debug] [Thread-3  ]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.not_null_stg_orders_order_id.81cfe2fe64, now test.ecommerce_analytics.unique_stg_customers_email.1ebcb2333e)
+[0m10:05:37.550998 [debug] [Thread-2  ]: Began running node test.ecommerce_analytics.unique_stg_products_product_id.7d950a1467
+[0m10:05:37.552701 [info ] [Thread-4  ]: 10 of 11 START test unique_stg_orders_order_id ................................. [RUN]
+[0m10:05:37.554697 [debug] [Thread-1  ]: Finished running node test.ecommerce_analytics.unique_stg_customers_customer_id.c7614daada
+[0m10:05:37.556164 [debug] [Thread-3  ]: Began compiling node test.ecommerce_analytics.unique_stg_customers_email.1ebcb2333e
+[0m10:05:37.557904 [info ] [Thread-2  ]: 11 of 11 START test unique_stg_products_product_id ............................. [RUN]
+[0m10:05:37.560186 [debug] [Thread-4  ]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.not_null_stg_orders_product_id.034adb910e, now test.ecommerce_analytics.unique_stg_orders_order_id.e3b841c71a)
+[0m10:05:37.571345 [debug] [Thread-3  ]: Writing injected SQL for node "test.ecommerce_analytics.unique_stg_customers_email.1ebcb2333e"
+[0m10:05:37.572946 [debug] [Thread-2  ]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.not_null_stg_products_product_id.6373b0acf3, now test.ecommerce_analytics.unique_stg_products_product_id.7d950a1467)
+[0m10:05:37.574467 [debug] [Thread-4  ]: Began compiling node test.ecommerce_analytics.unique_stg_orders_order_id.e3b841c71a
+[0m10:05:37.576849 [debug] [Thread-2  ]: Began compiling node test.ecommerce_analytics.unique_stg_products_product_id.7d950a1467
+[0m10:05:37.588139 [debug] [Thread-4  ]: Writing injected SQL for node "test.ecommerce_analytics.unique_stg_orders_order_id.e3b841c71a"
+[0m10:05:37.600752 [debug] [Thread-2  ]: Writing injected SQL for node "test.ecommerce_analytics.unique_stg_products_product_id.7d950a1467"
+[0m10:05:37.604209 [debug] [Thread-3  ]: Timing info for test.ecommerce_analytics.unique_stg_customers_email.1ebcb2333e (compile): 10:05:37.562345 => 10:05:37.603378
+[0m10:05:37.606072 [debug] [Thread-3  ]: Began executing node test.ecommerce_analytics.unique_stg_customers_email.1ebcb2333e
+[0m10:05:37.613388 [debug] [Thread-3  ]: Writing runtime sql for node "test.ecommerce_analytics.unique_stg_customers_email.1ebcb2333e"
+[0m10:05:37.616872 [debug] [Thread-4  ]: Timing info for test.ecommerce_analytics.unique_stg_orders_order_id.e3b841c71a (compile): 10:05:37.578437 => 10:05:37.615748
+[0m10:05:37.618662 [debug] [Thread-2  ]: Timing info for test.ecommerce_analytics.unique_stg_products_product_id.7d950a1467 (compile): 10:05:37.589156 => 10:05:37.617966
+[0m10:05:37.619839 [debug] [Thread-4  ]: Began executing node test.ecommerce_analytics.unique_stg_orders_order_id.e3b841c71a
+[0m10:05:37.621637 [debug] [Thread-2  ]: Began executing node test.ecommerce_analytics.unique_stg_products_product_id.7d950a1467
+[0m10:05:37.629250 [debug] [Thread-4  ]: Writing runtime sql for node "test.ecommerce_analytics.unique_stg_orders_order_id.e3b841c71a"
+[0m10:05:37.634798 [debug] [Thread-2  ]: Writing runtime sql for node "test.ecommerce_analytics.unique_stg_products_product_id.7d950a1467"
+[0m10:05:37.636770 [debug] [Thread-3  ]: Using postgres connection "test.ecommerce_analytics.unique_stg_customers_email.1ebcb2333e"
+[0m10:05:37.638659 [debug] [Thread-3  ]: On test.ecommerce_analytics.unique_stg_customers_email.1ebcb2333e: BEGIN
+[0m10:05:37.640424 [debug] [Thread-3  ]: Opening a new connection, currently in state closed
+[0m10:05:37.648650 [debug] [Thread-4  ]: Using postgres connection "test.ecommerce_analytics.unique_stg_orders_order_id.e3b841c71a"
+[0m10:05:37.650396 [debug] [Thread-4  ]: On test.ecommerce_analytics.unique_stg_orders_order_id.e3b841c71a: BEGIN
+[0m10:05:37.651880 [debug] [Thread-2  ]: Using postgres connection "test.ecommerce_analytics.unique_stg_products_product_id.7d950a1467"
+[0m10:05:37.652976 [debug] [Thread-4  ]: Opening a new connection, currently in state closed
+[0m10:05:37.654521 [debug] [Thread-2  ]: On test.ecommerce_analytics.unique_stg_products_product_id.7d950a1467: BEGIN
+[0m10:05:37.656937 [debug] [Thread-3  ]: SQL status: BEGIN in 0.0 seconds
+[0m10:05:37.659393 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
+[0m10:05:37.661484 [debug] [Thread-3  ]: Using postgres connection "test.ecommerce_analytics.unique_stg_customers_email.1ebcb2333e"
+[0m10:05:37.664583 [debug] [Thread-3  ]: On test.ecommerce_analytics.unique_stg_customers_email.1ebcb2333e: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "node_id": "test.ecommerce_analytics.unique_stg_customers_email.1ebcb2333e"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    email as unique_field,
+    count(*) as n_records
+
+from "airflow"."analytics_staging"."stg_customers"
+where email is not null
+group by email
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m10:05:37.669201 [debug] [Thread-3  ]: SQL status: SELECT 1 in 0.0 seconds
+[0m10:05:37.673671 [debug] [Thread-3  ]: Timing info for test.ecommerce_analytics.unique_stg_customers_email.1ebcb2333e (execute): 10:05:37.607658 => 10:05:37.672678
+[0m10:05:37.675993 [debug] [Thread-3  ]: On test.ecommerce_analytics.unique_stg_customers_email.1ebcb2333e: ROLLBACK
+[0m10:05:37.678362 [debug] [Thread-4  ]: SQL status: BEGIN in 0.0 seconds
+[0m10:05:37.680035 [debug] [Thread-3  ]: On test.ecommerce_analytics.unique_stg_customers_email.1ebcb2333e: Close
+[0m10:05:37.681631 [debug] [Thread-4  ]: Using postgres connection "test.ecommerce_analytics.unique_stg_orders_order_id.e3b841c71a"
+[0m10:05:37.682935 [debug] [Thread-2  ]: SQL status: BEGIN in 0.0 seconds
+[0m10:05:37.685871 [info ] [Thread-3  ]: 9 of 11 PASS unique_stg_customers_email ........................................ [[32mPASS[0m in 0.14s]
+[0m10:05:37.688980 [debug] [Thread-4  ]: On test.ecommerce_analytics.unique_stg_orders_order_id.e3b841c71a: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "node_id": "test.ecommerce_analytics.unique_stg_orders_order_id.e3b841c71a"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    order_id as unique_field,
+    count(*) as n_records
+
+from "airflow"."analytics_staging"."stg_orders"
+where order_id is not null
+group by order_id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m10:05:37.690915 [debug] [Thread-2  ]: Using postgres connection "test.ecommerce_analytics.unique_stg_products_product_id.7d950a1467"
+[0m10:05:37.693134 [debug] [Thread-3  ]: Finished running node test.ecommerce_analytics.unique_stg_customers_email.1ebcb2333e
+[0m10:05:37.695264 [debug] [Thread-2  ]: On test.ecommerce_analytics.unique_stg_products_product_id.7d950a1467: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "node_id": "test.ecommerce_analytics.unique_stg_products_product_id.7d950a1467"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    product_id as unique_field,
+    count(*) as n_records
+
+from "airflow"."analytics_staging"."stg_products"
+where product_id is not null
+group by product_id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m10:05:37.697387 [debug] [Thread-4  ]: SQL status: SELECT 1 in 0.0 seconds
+[0m10:05:37.702121 [debug] [Thread-4  ]: Timing info for test.ecommerce_analytics.unique_stg_orders_order_id.e3b841c71a (execute): 10:05:37.622989 => 10:05:37.701521
+[0m10:05:37.703262 [debug] [Thread-2  ]: SQL status: SELECT 1 in 0.0 seconds
+[0m10:05:37.704606 [debug] [Thread-4  ]: On test.ecommerce_analytics.unique_stg_orders_order_id.e3b841c71a: ROLLBACK
+[0m10:05:37.709114 [debug] [Thread-2  ]: Timing info for test.ecommerce_analytics.unique_stg_products_product_id.7d950a1467 (execute): 10:05:37.630117 => 10:05:37.707990
+[0m10:05:37.711154 [debug] [Thread-4  ]: On test.ecommerce_analytics.unique_stg_orders_order_id.e3b841c71a: Close
+[0m10:05:37.712494 [debug] [Thread-2  ]: On test.ecommerce_analytics.unique_stg_products_product_id.7d950a1467: ROLLBACK
+[0m10:05:37.716138 [info ] [Thread-4  ]: 10 of 11 PASS unique_stg_orders_order_id ....................................... [[32mPASS[0m in 0.16s]
+[0m10:05:37.718719 [debug] [Thread-2  ]: On test.ecommerce_analytics.unique_stg_products_product_id.7d950a1467: Close
+[0m10:05:37.720885 [debug] [Thread-4  ]: Finished running node test.ecommerce_analytics.unique_stg_orders_order_id.e3b841c71a
+[0m10:05:37.723834 [info ] [Thread-2  ]: 11 of 11 PASS unique_stg_products_product_id ................................... [[32mPASS[0m in 0.15s]
+[0m10:05:37.727771 [debug] [Thread-2  ]: Finished running node test.ecommerce_analytics.unique_stg_products_product_id.7d950a1467
+[0m10:05:37.733421 [debug] [MainThread]: Using postgres connection "master"
+[0m10:05:37.735247 [debug] [MainThread]: On master: BEGIN
+[0m10:05:37.736853 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m10:05:37.754462 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m10:05:37.757084 [debug] [MainThread]: On master: COMMIT
+[0m10:05:37.759347 [debug] [MainThread]: Using postgres connection "master"
+[0m10:05:37.761369 [debug] [MainThread]: On master: COMMIT
+[0m10:05:37.763876 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m10:05:37.765744 [debug] [MainThread]: On master: Close
+[0m10:05:37.768802 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:05:37.770735 [debug] [MainThread]: Connection 'test.ecommerce_analytics.unique_stg_customers_customer_id.c7614daada' was properly closed.
+[0m10:05:37.773470 [debug] [MainThread]: Connection 'test.ecommerce_analytics.unique_stg_products_product_id.7d950a1467' was properly closed.
+[0m10:05:37.776279 [debug] [MainThread]: Connection 'test.ecommerce_analytics.unique_stg_customers_email.1ebcb2333e' was properly closed.
+[0m10:05:37.778932 [debug] [MainThread]: Connection 'test.ecommerce_analytics.unique_stg_orders_order_id.e3b841c71a' was properly closed.
+[0m10:05:37.781165 [info ] [MainThread]: 
+[0m10:05:37.783623 [info ] [MainThread]: Finished running 11 tests in 0 hours 0 minutes and 0.90 seconds (0.90s).
+[0m10:05:37.796875 [debug] [MainThread]: Command end result
+[0m10:05:37.868932 [info ] [MainThread]: 
+[0m10:05:37.871559 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m10:05:37.874801 [info ] [MainThread]: 
+[0m10:05:37.877743 [info ] [MainThread]: Done. PASS=11 WARN=0 ERROR=0 SKIP=0 TOTAL=11
+[0m10:05:37.881721 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 2.1690571, "process_user_time": 5.757097, "process_kernel_time": 0.447192, "process_mem_max_rss": "124592", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m10:05:37.884894 [debug] [MainThread]: Command `dbt test` succeeded at 10:05:37.884054 after 2.17 seconds
+[0m10:05:37.887475 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7961f41ae130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7961f18941f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7961f204cd30>]}
+[0m10:05:37.890602 [debug] [MainThread]: Flushing usage events
+[0m10:05:44.560909 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x751c0bd9a3d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x751c09c52c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x751c09c52730>]}
+
+
+============================== 10:05:44.570248 | 50d958bc-3eec-435d-afed-28de2a59b3de ==============================
+[0m10:05:44.570248 [info ] [MainThread]: Running with dbt=1.7.0
+[0m10:05:44.571590 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '.', 'log_path': '/opt/airflow/dbt_project/logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt run --select marts --profiles-dir .', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m10:05:44.892125 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '50d958bc-3eec-435d-afed-28de2a59b3de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x751c0b6c8430>]}
+[0m10:05:45.021342 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '50d958bc-3eec-435d-afed-28de2a59b3de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x751c09467130>]}
+[0m10:05:45.022883 [info ] [MainThread]: Registered adapter: postgres=1.7.0
+[0m10:05:45.047409 [debug] [MainThread]: checksum: 8434eacd4ffdf0ca3ab22bf0e2d55b45306c9599613e842b959405abc489e606, vars: {}, profile: , target: , version: 1.7.0
+[0m10:05:45.319008 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m10:05:45.320215 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m10:05:45.329571 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '50d958bc-3eec-435d-afed-28de2a59b3de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x751c08cf5f40>]}
+[0m10:05:45.398075 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '50d958bc-3eec-435d-afed-28de2a59b3de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x751c08db0d30>]}
+[0m10:05:45.399153 [info ] [MainThread]: Found 6 models, 17 tests, 0 sources, 0 exposures, 0 metrics, 401 macros, 0 groups, 0 semantic models
+[0m10:05:45.400181 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '50d958bc-3eec-435d-afed-28de2a59b3de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x751c08db0f10>]}
+[0m10:05:45.402814 [info ] [MainThread]: 
+[0m10:05:45.404457 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m10:05:45.406718 [debug] [ThreadPool]: Acquiring new postgres connection 'list_airflow'
+[0m10:05:45.421668 [debug] [ThreadPool]: Using postgres connection "list_airflow"
+[0m10:05:45.422816 [debug] [ThreadPool]: On list_airflow: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "connection_name": "list_airflow"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m10:05:45.423759 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:05:45.435259 [debug] [ThreadPool]: SQL status: SELECT 8 in 0.0 seconds
+[0m10:05:45.437591 [debug] [ThreadPool]: On list_airflow: Close
+[0m10:05:45.441253 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_airflow, now list_airflow_analytics_staging)
+[0m10:05:45.443114 [debug] [ThreadPool]: Acquiring new postgres connection 'list_airflow_analytics_analytics'
+[0m10:05:45.452497 [debug] [ThreadPool]: Using postgres connection "list_airflow_analytics_staging"
+[0m10:05:45.455749 [debug] [ThreadPool]: Using postgres connection "list_airflow_analytics_analytics"
+[0m10:05:45.456931 [debug] [ThreadPool]: On list_airflow_analytics_staging: BEGIN
+[0m10:05:45.458052 [debug] [ThreadPool]: On list_airflow_analytics_analytics: BEGIN
+[0m10:05:45.459085 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m10:05:45.460094 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:05:45.471106 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m10:05:45.472729 [debug] [ThreadPool]: Using postgres connection "list_airflow_analytics_analytics"
+[0m10:05:45.473907 [debug] [ThreadPool]: On list_airflow_analytics_analytics: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "connection_name": "list_airflow_analytics_analytics"} */
+select
+      'airflow' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics_analytics'
+    union all
+    select
+      'airflow' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics_analytics'
+    union all
+    select
+      'airflow' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics_analytics'
+  
+[0m10:05:45.475307 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m10:05:45.476587 [debug] [ThreadPool]: Using postgres connection "list_airflow_analytics_staging"
+[0m10:05:45.477810 [debug] [ThreadPool]: On list_airflow_analytics_staging: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "connection_name": "list_airflow_analytics_staging"} */
+select
+      'airflow' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics_staging'
+    union all
+    select
+      'airflow' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics_staging'
+    union all
+    select
+      'airflow' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics_staging'
+  
+[0m10:05:45.478675 [debug] [ThreadPool]: SQL status: SELECT 3 in 0.0 seconds
+[0m10:05:45.481375 [debug] [ThreadPool]: On list_airflow_analytics_analytics: ROLLBACK
+[0m10:05:45.482926 [debug] [ThreadPool]: SQL status: SELECT 3 in 0.0 seconds
+[0m10:05:45.483719 [debug] [ThreadPool]: On list_airflow_analytics_analytics: Close
+[0m10:05:45.485723 [debug] [ThreadPool]: On list_airflow_analytics_staging: ROLLBACK
+[0m10:05:45.489098 [debug] [ThreadPool]: On list_airflow_analytics_staging: Close
+[0m10:05:45.497573 [debug] [MainThread]: Using postgres connection "master"
+[0m10:05:45.498756 [debug] [MainThread]: On master: BEGIN
+[0m10:05:45.499711 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:05:45.509845 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m10:05:45.511284 [debug] [MainThread]: Using postgres connection "master"
+[0m10:05:45.512631 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m10:05:45.540983 [debug] [MainThread]: SQL status: SELECT 3 in 0.0 seconds
+[0m10:05:45.543574 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '50d958bc-3eec-435d-afed-28de2a59b3de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x751c08db0310>]}
+[0m10:05:45.544985 [debug] [MainThread]: On master: ROLLBACK
+[0m10:05:45.546412 [debug] [MainThread]: Using postgres connection "master"
+[0m10:05:45.547401 [debug] [MainThread]: On master: BEGIN
+[0m10:05:45.549001 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m10:05:45.550166 [debug] [MainThread]: On master: COMMIT
+[0m10:05:45.551505 [debug] [MainThread]: Using postgres connection "master"
+[0m10:05:45.552475 [debug] [MainThread]: On master: COMMIT
+[0m10:05:45.553745 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m10:05:45.554786 [debug] [MainThread]: On master: Close
+[0m10:05:45.556369 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m10:05:45.557588 [info ] [MainThread]: 
+[0m10:05:45.569686 [debug] [Thread-1  ]: Began running node model.ecommerce_analytics.mart_customer_orders
+[0m10:05:45.570680 [debug] [Thread-2  ]: Began running node model.ecommerce_analytics.mart_daily_sales
+[0m10:05:45.571776 [debug] [Thread-3  ]: Began running node model.ecommerce_analytics.mart_revenue_by_category
+[0m10:05:45.573101 [info ] [Thread-1  ]: 1 of 3 START sql table model analytics_analytics.mart_customer_orders .......... [RUN]
+[0m10:05:45.575668 [info ] [Thread-2  ]: 2 of 3 START sql table model analytics_analytics.mart_daily_sales .............. [RUN]
+[0m10:05:45.577731 [info ] [Thread-3  ]: 3 of 3 START sql table model analytics_analytics.mart_revenue_by_category ...... [RUN]
+[0m10:05:45.579716 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_airflow_analytics_staging, now model.ecommerce_analytics.mart_customer_orders)
+[0m10:05:45.581675 [debug] [Thread-2  ]: Re-using an available connection from the pool (formerly list_airflow_analytics_analytics, now model.ecommerce_analytics.mart_daily_sales)
+[0m10:05:45.583678 [debug] [Thread-3  ]: Acquiring new postgres connection 'model.ecommerce_analytics.mart_revenue_by_category'
+[0m10:05:45.585146 [debug] [Thread-1  ]: Began compiling node model.ecommerce_analytics.mart_customer_orders
+[0m10:05:45.586467 [debug] [Thread-2  ]: Began compiling node model.ecommerce_analytics.mart_daily_sales
+[0m10:05:45.587670 [debug] [Thread-3  ]: Began compiling node model.ecommerce_analytics.mart_revenue_by_category
+[0m10:05:45.603757 [debug] [Thread-2  ]: Writing injected SQL for node "model.ecommerce_analytics.mart_daily_sales"
+[0m10:05:45.606456 [debug] [Thread-1  ]: Writing injected SQL for node "model.ecommerce_analytics.mart_customer_orders"
+[0m10:05:45.612698 [debug] [Thread-3  ]: Writing injected SQL for node "model.ecommerce_analytics.mart_revenue_by_category"
+[0m10:05:45.624754 [debug] [Thread-2  ]: Timing info for model.ecommerce_analytics.mart_daily_sales (compile): 10:05:45.599850 => 10:05:45.624066
+[0m10:05:45.626229 [debug] [Thread-1  ]: Timing info for model.ecommerce_analytics.mart_customer_orders (compile): 10:05:45.588604 => 10:05:45.625723
+[0m10:05:45.627324 [debug] [Thread-2  ]: Began executing node model.ecommerce_analytics.mart_daily_sales
+[0m10:05:45.628926 [debug] [Thread-1  ]: Began executing node model.ecommerce_analytics.mart_customer_orders
+[0m10:05:45.635905 [debug] [Thread-3  ]: Timing info for model.ecommerce_analytics.mart_revenue_by_category (compile): 10:05:45.607748 => 10:05:45.635383
+[0m10:05:45.653674 [debug] [Thread-3  ]: Began executing node model.ecommerce_analytics.mart_revenue_by_category
+[0m10:05:45.875319 [debug] [Thread-2  ]: Writing runtime sql for node "model.ecommerce_analytics.mart_daily_sales"
+[0m10:05:45.883017 [debug] [Thread-1  ]: Writing runtime sql for node "model.ecommerce_analytics.mart_customer_orders"
+[0m10:05:45.883871 [debug] [Thread-3  ]: Writing runtime sql for node "model.ecommerce_analytics.mart_revenue_by_category"
+[0m10:05:45.895927 [debug] [Thread-1  ]: Using postgres connection "model.ecommerce_analytics.mart_customer_orders"
+[0m10:05:45.897935 [debug] [Thread-1  ]: On model.ecommerce_analytics.mart_customer_orders: BEGIN
+[0m10:05:45.899259 [debug] [Thread-2  ]: Using postgres connection "model.ecommerce_analytics.mart_daily_sales"
+[0m10:05:45.900679 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m10:05:45.902390 [debug] [Thread-3  ]: Using postgres connection "model.ecommerce_analytics.mart_revenue_by_category"
+[0m10:05:45.903490 [debug] [Thread-2  ]: On model.ecommerce_analytics.mart_daily_sales: BEGIN
+[0m10:05:45.906251 [debug] [Thread-3  ]: On model.ecommerce_analytics.mart_revenue_by_category: BEGIN
+[0m10:05:45.908417 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
+[0m10:05:45.910333 [debug] [Thread-3  ]: Opening a new connection, currently in state init
+[0m10:05:45.919301 [debug] [Thread-1  ]: SQL status: BEGIN in 0.0 seconds
+[0m10:05:45.921088 [debug] [Thread-1  ]: Using postgres connection "model.ecommerce_analytics.mart_customer_orders"
+[0m10:05:45.923418 [debug] [Thread-1  ]: On model.ecommerce_analytics.mart_customer_orders: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "node_id": "model.ecommerce_analytics.mart_customer_orders"} */
+
+  
+    
+
+  create  table "airflow"."analytics_analytics"."mart_customer_orders__dbt_tmp"
+  
+  
+    as
+  
+  (
+    -- Mart: Customer Orders Summary
+-- Joins orders with customers to give a full picture per customer
+
+with orders as (
+    select * from "airflow"."analytics_staging"."stg_orders"
+),
+
+customers as (
+    select * from "airflow"."analytics_staging"."stg_customers"
+),
+
+customer_order_summary as (
+    select
+        c.customer_id,
+        c.customer_name,
+        c.email,
+        c.city,
+        c.state,
+        c.segment,
+        count(o.order_id)                    as total_orders,
+        sum(o.total_amount)                  as total_revenue,
+        avg(o.total_amount)                  as avg_order_value,
+        min(o.order_date)                    as first_order_date,
+        max(o.order_date)                    as last_order_date,
+        sum(case when o.status = 'completed'
+            then o.total_amount else 0 end)  as completed_revenue,
+        sum(case when o.status = 'cancelled'
+            then 1 else 0 end)               as cancelled_orders
+    from customers c
+    left join orders o on c.customer_id = o.customer_id
+    group by
+        c.customer_id, c.customer_name, c.email,
+        c.city, c.state, c.segment
+)
+
+select * from customer_order_summary
+  );
+  
+[0m10:05:45.929719 [debug] [Thread-2  ]: SQL status: BEGIN in 0.0 seconds
+[0m10:05:45.931627 [debug] [Thread-3  ]: SQL status: BEGIN in 0.0 seconds
+[0m10:05:45.932988 [debug] [Thread-2  ]: Using postgres connection "model.ecommerce_analytics.mart_daily_sales"
+[0m10:05:45.934691 [debug] [Thread-3  ]: Using postgres connection "model.ecommerce_analytics.mart_revenue_by_category"
+[0m10:05:45.936573 [debug] [Thread-2  ]: On model.ecommerce_analytics.mart_daily_sales: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "node_id": "model.ecommerce_analytics.mart_daily_sales"} */
+
+  
+    
+
+  create  table "airflow"."analytics_analytics"."mart_daily_sales__dbt_tmp"
+  
+  
+    as
+  
+  (
+    -- Mart: Daily Sales Summary
+-- Aggregates orders by date for trend analysis
+
+with orders as (
+    select * from "airflow"."analytics_staging"."stg_orders"
+),
+
+daily_sales as (
+    select
+        order_date,
+        count(distinct order_id)             as total_orders,
+        count(distinct customer_id)          as unique_customers,
+        sum(total_amount)                    as daily_revenue,
+        avg(total_amount)                    as avg_order_value,
+        sum(quantity)                        as total_units_sold,
+        sum(case when status = 'completed'
+            then total_amount else 0 end)    as completed_revenue,
+        sum(case when status = 'cancelled'
+            then 1 else 0 end)               as cancelled_orders,
+        sum(case when status = 'pending'
+            then 1 else 0 end)               as pending_orders
+    from orders
+    group by order_date
+)
+
+select * from daily_sales
+order by order_date
+  );
+  
+[0m10:05:45.938822 [debug] [Thread-3  ]: On model.ecommerce_analytics.mart_revenue_by_category: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "node_id": "model.ecommerce_analytics.mart_revenue_by_category"} */
+
+  
+    
+
+  create  table "airflow"."analytics_analytics"."mart_revenue_by_category__dbt_tmp"
+  
+  
+    as
+  
+  (
+    -- Mart: Revenue by Product Category
+-- Joins orders with products to analyze revenue by category
+
+with orders as (
+    select * from "airflow"."analytics_staging"."stg_orders"
+),
+
+products as (
+    select * from "airflow"."analytics_staging"."stg_products"
+),
+
+category_revenue as (
+    select
+        p.category,
+        p.brand,
+        count(distinct o.order_id)           as total_orders,
+        sum(o.quantity)                      as total_units_sold,
+        sum(o.total_amount)                  as total_revenue,
+        avg(o.total_amount)                  as avg_order_value,
+        sum(o.quantity * p.cost_price)       as total_cost,
+        sum(o.total_amount) -
+            sum(o.quantity * p.cost_price)   as total_profit,
+        avg(p.profit_margin_pct)             as avg_profit_margin
+    from orders o
+    left join products p on o.product_id = p.product_id
+    where o.status = 'completed'
+    group by p.category, p.brand
+)
+
+select * from category_revenue
+  );
+  
+[0m10:05:45.943710 [debug] [Thread-1  ]: SQL status: SELECT 7 in 0.0 seconds
+[0m10:05:45.954182 [debug] [Thread-2  ]: SQL status: SELECT 12 in 0.0 seconds
+[0m10:05:45.961391 [debug] [Thread-3  ]: SQL status: SELECT 4 in 0.0 seconds
+[0m10:05:45.971191 [debug] [Thread-1  ]: Using postgres connection "model.ecommerce_analytics.mart_customer_orders"
+[0m10:05:45.975420 [debug] [Thread-2  ]: Using postgres connection "model.ecommerce_analytics.mart_daily_sales"
+[0m10:05:45.983822 [debug] [Thread-3  ]: Using postgres connection "model.ecommerce_analytics.mart_revenue_by_category"
+[0m10:05:45.985217 [debug] [Thread-1  ]: On model.ecommerce_analytics.mart_customer_orders: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "node_id": "model.ecommerce_analytics.mart_customer_orders"} */
+alter table "airflow"."analytics_analytics"."mart_customer_orders" rename to "mart_customer_orders__dbt_backup"
+[0m10:05:45.987002 [debug] [Thread-2  ]: On model.ecommerce_analytics.mart_daily_sales: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "node_id": "model.ecommerce_analytics.mart_daily_sales"} */
+alter table "airflow"."analytics_analytics"."mart_daily_sales" rename to "mart_daily_sales__dbt_backup"
+[0m10:05:45.988798 [debug] [Thread-3  ]: On model.ecommerce_analytics.mart_revenue_by_category: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "node_id": "model.ecommerce_analytics.mart_revenue_by_category"} */
+alter table "airflow"."analytics_analytics"."mart_revenue_by_category" rename to "mart_revenue_by_category__dbt_backup"
+[0m10:05:45.991906 [debug] [Thread-2  ]: SQL status: ALTER TABLE in 0.0 seconds
+[0m10:05:45.993395 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.0 seconds
+[0m10:05:45.995138 [debug] [Thread-3  ]: SQL status: ALTER TABLE in 0.0 seconds
+[0m10:05:46.003063 [debug] [Thread-2  ]: Using postgres connection "model.ecommerce_analytics.mart_daily_sales"
+[0m10:05:46.011705 [debug] [Thread-1  ]: Using postgres connection "model.ecommerce_analytics.mart_customer_orders"
+[0m10:05:46.019953 [debug] [Thread-3  ]: Using postgres connection "model.ecommerce_analytics.mart_revenue_by_category"
+[0m10:05:46.021260 [debug] [Thread-2  ]: On model.ecommerce_analytics.mart_daily_sales: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "node_id": "model.ecommerce_analytics.mart_daily_sales"} */
+alter table "airflow"."analytics_analytics"."mart_daily_sales__dbt_tmp" rename to "mart_daily_sales"
+[0m10:05:46.022888 [debug] [Thread-1  ]: On model.ecommerce_analytics.mart_customer_orders: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "node_id": "model.ecommerce_analytics.mart_customer_orders"} */
+alter table "airflow"."analytics_analytics"."mart_customer_orders__dbt_tmp" rename to "mart_customer_orders"
+[0m10:05:46.024785 [debug] [Thread-3  ]: On model.ecommerce_analytics.mart_revenue_by_category: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "node_id": "model.ecommerce_analytics.mart_revenue_by_category"} */
+alter table "airflow"."analytics_analytics"."mart_revenue_by_category__dbt_tmp" rename to "mart_revenue_by_category"
+[0m10:05:46.027311 [debug] [Thread-2  ]: SQL status: ALTER TABLE in 0.0 seconds
+[0m10:05:46.029927 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.0 seconds
+[0m10:05:46.032041 [debug] [Thread-3  ]: SQL status: ALTER TABLE in 0.0 seconds
+[0m10:05:46.119097 [debug] [Thread-2  ]: On model.ecommerce_analytics.mart_daily_sales: COMMIT
+[0m10:05:46.123634 [debug] [Thread-1  ]: On model.ecommerce_analytics.mart_customer_orders: COMMIT
+[0m10:05:46.131773 [debug] [Thread-2  ]: Using postgres connection "model.ecommerce_analytics.mart_daily_sales"
+[0m10:05:46.133763 [debug] [Thread-3  ]: On model.ecommerce_analytics.mart_revenue_by_category: COMMIT
+[0m10:05:46.135330 [debug] [Thread-1  ]: Using postgres connection "model.ecommerce_analytics.mart_customer_orders"
+[0m10:05:46.137124 [debug] [Thread-2  ]: On model.ecommerce_analytics.mart_daily_sales: COMMIT
+[0m10:05:46.138920 [debug] [Thread-3  ]: Using postgres connection "model.ecommerce_analytics.mart_revenue_by_category"
+[0m10:05:46.140399 [debug] [Thread-1  ]: On model.ecommerce_analytics.mart_customer_orders: COMMIT
+[0m10:05:46.142416 [debug] [Thread-3  ]: On model.ecommerce_analytics.mart_revenue_by_category: COMMIT
+[0m10:05:46.144707 [debug] [Thread-2  ]: SQL status: COMMIT in 0.0 seconds
+[0m10:05:46.146049 [debug] [Thread-1  ]: SQL status: COMMIT in 0.0 seconds
+[0m10:05:46.158445 [debug] [Thread-3  ]: SQL status: COMMIT in 0.0 seconds
+[0m10:05:46.162197 [debug] [Thread-2  ]: Applying DROP to: "airflow"."analytics_analytics"."mart_daily_sales__dbt_backup"
+[0m10:05:46.171334 [debug] [Thread-1  ]: Applying DROP to: "airflow"."analytics_analytics"."mart_customer_orders__dbt_backup"
+[0m10:05:46.178551 [debug] [Thread-3  ]: Applying DROP to: "airflow"."analytics_analytics"."mart_revenue_by_category__dbt_backup"
+[0m10:05:46.189003 [debug] [Thread-2  ]: Using postgres connection "model.ecommerce_analytics.mart_daily_sales"
+[0m10:05:46.191195 [debug] [Thread-1  ]: Using postgres connection "model.ecommerce_analytics.mart_customer_orders"
+[0m10:05:46.194457 [debug] [Thread-3  ]: Using postgres connection "model.ecommerce_analytics.mart_revenue_by_category"
+[0m10:05:46.196499 [debug] [Thread-2  ]: On model.ecommerce_analytics.mart_daily_sales: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "node_id": "model.ecommerce_analytics.mart_daily_sales"} */
+drop table if exists "airflow"."analytics_analytics"."mart_daily_sales__dbt_backup" cascade
+[0m10:05:46.198223 [debug] [Thread-1  ]: On model.ecommerce_analytics.mart_customer_orders: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "node_id": "model.ecommerce_analytics.mart_customer_orders"} */
+drop table if exists "airflow"."analytics_analytics"."mart_customer_orders__dbt_backup" cascade
+[0m10:05:46.199866 [debug] [Thread-3  ]: On model.ecommerce_analytics.mart_revenue_by_category: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "node_id": "model.ecommerce_analytics.mart_revenue_by_category"} */
+drop table if exists "airflow"."analytics_analytics"."mart_revenue_by_category__dbt_backup" cascade
+[0m10:05:46.211712 [debug] [Thread-2  ]: SQL status: DROP TABLE in 0.0 seconds
+[0m10:05:46.216005 [debug] [Thread-2  ]: Timing info for model.ecommerce_analytics.mart_daily_sales (execute): 10:05:45.630088 => 10:05:46.215430
+[0m10:05:46.217297 [debug] [Thread-1  ]: SQL status: DROP TABLE in 0.0 seconds
+[0m10:05:46.218409 [debug] [Thread-3  ]: SQL status: DROP TABLE in 0.0 seconds
+[0m10:05:46.219416 [debug] [Thread-2  ]: On model.ecommerce_analytics.mart_daily_sales: Close
+[0m10:05:46.223149 [debug] [Thread-1  ]: Timing info for model.ecommerce_analytics.mart_customer_orders (execute): 10:05:45.642236 => 10:05:46.222664
+[0m10:05:46.228113 [debug] [Thread-3  ]: Timing info for model.ecommerce_analytics.mart_revenue_by_category (execute): 10:05:45.670789 => 10:05:46.227504
+[0m10:05:46.231023 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '50d958bc-3eec-435d-afed-28de2a59b3de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x751c08db0d90>]}
+[0m10:05:46.232390 [debug] [Thread-1  ]: On model.ecommerce_analytics.mart_customer_orders: Close
+[0m10:05:46.233993 [debug] [Thread-3  ]: On model.ecommerce_analytics.mart_revenue_by_category: Close
+[0m10:05:46.236023 [info ] [Thread-2  ]: 2 of 3 OK created sql table model analytics_analytics.mart_daily_sales ......... [[32mSELECT 12[0m in 0.65s]
+[0m10:05:46.238896 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '50d958bc-3eec-435d-afed-28de2a59b3de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x751c0886d7c0>]}
+[0m10:05:46.241571 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '50d958bc-3eec-435d-afed-28de2a59b3de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x751c08c60640>]}
+[0m10:05:46.243595 [debug] [Thread-2  ]: Finished running node model.ecommerce_analytics.mart_daily_sales
+[0m10:05:46.245772 [info ] [Thread-1  ]: 1 of 3 OK created sql table model analytics_analytics.mart_customer_orders ..... [[32mSELECT 7[0m in 0.66s]
+[0m10:05:46.247621 [info ] [Thread-3  ]: 3 of 3 OK created sql table model analytics_analytics.mart_revenue_by_category . [[32mSELECT 4[0m in 0.66s]
+[0m10:05:46.250810 [debug] [Thread-1  ]: Finished running node model.ecommerce_analytics.mart_customer_orders
+[0m10:05:46.252726 [debug] [Thread-3  ]: Finished running node model.ecommerce_analytics.mart_revenue_by_category
+[0m10:05:46.258332 [debug] [MainThread]: Using postgres connection "master"
+[0m10:05:46.259992 [debug] [MainThread]: On master: BEGIN
+[0m10:05:46.261994 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m10:05:46.276433 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m10:05:46.278354 [debug] [MainThread]: On master: COMMIT
+[0m10:05:46.279738 [debug] [MainThread]: Using postgres connection "master"
+[0m10:05:46.281093 [debug] [MainThread]: On master: COMMIT
+[0m10:05:46.282741 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m10:05:46.284228 [debug] [MainThread]: On master: Close
+[0m10:05:46.286614 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:05:46.288019 [debug] [MainThread]: Connection 'model.ecommerce_analytics.mart_customer_orders' was properly closed.
+[0m10:05:46.289408 [debug] [MainThread]: Connection 'model.ecommerce_analytics.mart_daily_sales' was properly closed.
+[0m10:05:46.290614 [debug] [MainThread]: Connection 'model.ecommerce_analytics.mart_revenue_by_category' was properly closed.
+[0m10:05:46.291876 [info ] [MainThread]: 
+[0m10:05:46.293941 [info ] [MainThread]: Finished running 3 table models in 0 hours 0 minutes and 0.89 seconds (0.89s).
+[0m10:05:46.297466 [debug] [MainThread]: Command end result
+[0m10:05:46.347698 [info ] [MainThread]: 
+[0m10:05:46.349508 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m10:05:46.350997 [info ] [MainThread]: 
+[0m10:05:46.352694 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+[0m10:05:46.355078 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.8819232, "process_user_time": 4.585382, "process_kernel_time": 0.287334, "process_mem_max_rss": "124940", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m10:05:46.356917 [debug] [MainThread]: Command `dbt run` succeeded at 10:05:46.356561 after 1.88 seconds
+[0m10:05:46.358356 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x751c0bd9a3d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x751c0a2bd910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x751c08c52940>]}
+[0m10:05:46.359827 [debug] [MainThread]: Flushing usage events
+[0m10:05:55.893347 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7352455da3d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x735243450fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x735243450610>]}
+
+
+============================== 10:05:55.908395 | 7360ff40-3eb9-4272-aef8-aab6b44809e5 ==============================
+[0m10:05:55.908395 [info ] [MainThread]: Running with dbt=1.7.0
+[0m10:05:55.911081 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '.', 'version_check': 'True', 'debug': 'False', 'log_path': '/opt/airflow/dbt_project/logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt test --select marts --profiles-dir .', 'send_anonymous_usage_stats': 'True'}
+[0m10:05:56.544597 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7360ff40-3eb9-4272-aef8-aab6b44809e5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x735245ba5e80>]}
+[0m10:05:56.840113 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7360ff40-3eb9-4272-aef8-aab6b44809e5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x735242c6e130>]}
+[0m10:05:56.843872 [info ] [MainThread]: Registered adapter: postgres=1.7.0
+[0m10:05:56.884203 [debug] [MainThread]: checksum: 8434eacd4ffdf0ca3ab22bf0e2d55b45306c9599613e842b959405abc489e606, vars: {}, profile: , target: , version: 1.7.0
+[0m10:05:57.359098 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m10:05:57.361021 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m10:05:57.377532 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7360ff40-3eb9-4272-aef8-aab6b44809e5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7352424f4f10>]}
+[0m10:05:57.463074 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7360ff40-3eb9-4272-aef8-aab6b44809e5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7352425a9ca0>]}
+[0m10:05:57.464902 [info ] [MainThread]: Found 6 models, 17 tests, 0 sources, 0 exposures, 0 metrics, 401 macros, 0 groups, 0 semantic models
+[0m10:05:57.468074 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7360ff40-3eb9-4272-aef8-aab6b44809e5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7352425a9dc0>]}
+[0m10:05:57.472691 [info ] [MainThread]: 
+[0m10:05:57.475393 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m10:05:57.479702 [debug] [ThreadPool]: Acquiring new postgres connection 'list_airflow_analytics_analytics'
+[0m10:05:57.482658 [debug] [ThreadPool]: Acquiring new postgres connection 'list_airflow_analytics_staging'
+[0m10:05:57.519717 [debug] [ThreadPool]: Using postgres connection "list_airflow_analytics_analytics"
+[0m10:05:57.526914 [debug] [ThreadPool]: Using postgres connection "list_airflow_analytics_staging"
+[0m10:05:57.528201 [debug] [ThreadPool]: On list_airflow_analytics_analytics: BEGIN
+[0m10:05:57.530392 [debug] [ThreadPool]: On list_airflow_analytics_staging: BEGIN
+[0m10:05:57.532391 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:05:57.534203 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:05:57.553001 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m10:05:57.554736 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m10:05:57.556443 [debug] [ThreadPool]: Using postgres connection "list_airflow_analytics_analytics"
+[0m10:05:57.558249 [debug] [ThreadPool]: Using postgres connection "list_airflow_analytics_staging"
+[0m10:05:57.559858 [debug] [ThreadPool]: On list_airflow_analytics_analytics: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "connection_name": "list_airflow_analytics_analytics"} */
+select
+      'airflow' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics_analytics'
+    union all
+    select
+      'airflow' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics_analytics'
+    union all
+    select
+      'airflow' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics_analytics'
+  
+[0m10:05:57.561664 [debug] [ThreadPool]: On list_airflow_analytics_staging: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "connection_name": "list_airflow_analytics_staging"} */
+select
+      'airflow' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics_staging'
+    union all
+    select
+      'airflow' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics_staging'
+    union all
+    select
+      'airflow' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics_staging'
+  
+[0m10:05:57.568854 [debug] [ThreadPool]: SQL status: SELECT 3 in 0.0 seconds
+[0m10:05:57.570160 [debug] [ThreadPool]: SQL status: SELECT 3 in 0.0 seconds
+[0m10:05:57.573240 [debug] [ThreadPool]: On list_airflow_analytics_staging: ROLLBACK
+[0m10:05:57.576597 [debug] [ThreadPool]: On list_airflow_analytics_analytics: ROLLBACK
+[0m10:05:57.578722 [debug] [ThreadPool]: On list_airflow_analytics_staging: Close
+[0m10:05:57.580210 [debug] [ThreadPool]: On list_airflow_analytics_analytics: Close
+[0m10:05:57.598716 [debug] [MainThread]: Using postgres connection "master"
+[0m10:05:57.600556 [debug] [MainThread]: On master: BEGIN
+[0m10:05:57.602053 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:05:57.616986 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m10:05:57.618791 [debug] [MainThread]: Using postgres connection "master"
+[0m10:05:57.620962 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m10:05:57.665465 [debug] [MainThread]: SQL status: SELECT 3 in 0.0 seconds
+[0m10:05:57.668760 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7360ff40-3eb9-4272-aef8-aab6b44809e5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7352424d7df0>]}
+[0m10:05:57.670616 [debug] [MainThread]: On master: ROLLBACK
+[0m10:05:57.672550 [debug] [MainThread]: Using postgres connection "master"
+[0m10:05:57.674030 [debug] [MainThread]: On master: BEGIN
+[0m10:05:57.676464 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m10:05:57.678271 [debug] [MainThread]: On master: COMMIT
+[0m10:05:57.679743 [debug] [MainThread]: Using postgres connection "master"
+[0m10:05:57.681230 [debug] [MainThread]: On master: COMMIT
+[0m10:05:57.683207 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m10:05:57.684718 [debug] [MainThread]: On master: Close
+[0m10:05:57.687530 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m10:05:57.689846 [info ] [MainThread]: 
+[0m10:05:57.708577 [debug] [Thread-1  ]: Began running node test.ecommerce_analytics.not_null_mart_customer_orders_customer_id.65556082dc
+[0m10:05:57.710061 [debug] [Thread-2  ]: Began running node test.ecommerce_analytics.not_null_mart_customer_orders_total_revenue.2fff1d6d64
+[0m10:05:57.711433 [debug] [Thread-3  ]: Began running node test.ecommerce_analytics.not_null_mart_daily_sales_order_date.0e908a3de5
+[0m10:05:57.714098 [debug] [Thread-4  ]: Began running node test.ecommerce_analytics.not_null_mart_revenue_by_category_category.0607d31a2e
+[0m10:05:57.712822 [info ] [Thread-1  ]: 1 of 6 START test not_null_mart_customer_orders_customer_id .................... [RUN]
+[0m10:05:57.716118 [info ] [Thread-2  ]: 2 of 6 START test not_null_mart_customer_orders_total_revenue .................. [RUN]
+[0m10:05:57.718858 [info ] [Thread-3  ]: 3 of 6 START test not_null_mart_daily_sales_order_date ......................... [RUN]
+[0m10:05:57.720750 [info ] [Thread-4  ]: 4 of 6 START test not_null_mart_revenue_by_category_category ................... [RUN]
+[0m10:05:57.723206 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_airflow_analytics_staging, now test.ecommerce_analytics.not_null_mart_customer_orders_customer_id.65556082dc)
+[0m10:05:57.725417 [debug] [Thread-2  ]: Re-using an available connection from the pool (formerly list_airflow_analytics_analytics, now test.ecommerce_analytics.not_null_mart_customer_orders_total_revenue.2fff1d6d64)
+[0m10:05:57.728877 [debug] [Thread-3  ]: Acquiring new postgres connection 'test.ecommerce_analytics.not_null_mart_daily_sales_order_date.0e908a3de5'
+[0m10:05:57.731394 [debug] [Thread-4  ]: Acquiring new postgres connection 'test.ecommerce_analytics.not_null_mart_revenue_by_category_category.0607d31a2e'
+[0m10:05:57.734002 [debug] [Thread-1  ]: Began compiling node test.ecommerce_analytics.not_null_mart_customer_orders_customer_id.65556082dc
+[0m10:05:57.736466 [debug] [Thread-2  ]: Began compiling node test.ecommerce_analytics.not_null_mart_customer_orders_total_revenue.2fff1d6d64
+[0m10:05:57.738806 [debug] [Thread-3  ]: Began compiling node test.ecommerce_analytics.not_null_mart_daily_sales_order_date.0e908a3de5
+[0m10:05:57.741399 [debug] [Thread-4  ]: Began compiling node test.ecommerce_analytics.not_null_mart_revenue_by_category_category.0607d31a2e
+[0m10:05:57.821726 [debug] [Thread-3  ]: Writing injected SQL for node "test.ecommerce_analytics.not_null_mart_daily_sales_order_date.0e908a3de5"
+[0m10:05:57.829110 [debug] [Thread-2  ]: Writing injected SQL for node "test.ecommerce_analytics.not_null_mart_customer_orders_total_revenue.2fff1d6d64"
+[0m10:05:57.859919 [debug] [Thread-1  ]: Writing injected SQL for node "test.ecommerce_analytics.not_null_mart_customer_orders_customer_id.65556082dc"
+[0m10:05:57.862258 [debug] [Thread-4  ]: Writing injected SQL for node "test.ecommerce_analytics.not_null_mart_revenue_by_category_category.0607d31a2e"
+[0m10:05:57.895515 [debug] [Thread-3  ]: Timing info for test.ecommerce_analytics.not_null_mart_daily_sales_order_date.0e908a3de5 (compile): 10:05:57.776228 => 10:05:57.894338
+[0m10:05:57.897965 [debug] [Thread-1  ]: Timing info for test.ecommerce_analytics.not_null_mart_customer_orders_customer_id.65556082dc (compile): 10:05:57.742960 => 10:05:57.896967
+[0m10:05:57.899692 [debug] [Thread-3  ]: Began executing node test.ecommerce_analytics.not_null_mart_daily_sales_order_date.0e908a3de5
+[0m10:05:57.909451 [debug] [Thread-2  ]: Timing info for test.ecommerce_analytics.not_null_mart_customer_orders_total_revenue.2fff1d6d64 (compile): 10:05:57.754214 => 10:05:57.908381
+[0m10:05:57.906473 [debug] [Thread-1  ]: Began executing node test.ecommerce_analytics.not_null_mart_customer_orders_customer_id.65556082dc
+[0m10:05:57.926113 [debug] [Thread-4  ]: Timing info for test.ecommerce_analytics.not_null_mart_revenue_by_category_category.0607d31a2e (compile): 10:05:57.829824 => 10:05:57.924866
+[0m10:05:57.937205 [debug] [Thread-2  ]: Began executing node test.ecommerce_analytics.not_null_mart_customer_orders_total_revenue.2fff1d6d64
+[0m10:05:57.989041 [debug] [Thread-4  ]: Began executing node test.ecommerce_analytics.not_null_mart_revenue_by_category_category.0607d31a2e
+[0m10:05:58.018701 [debug] [Thread-3  ]: Writing runtime sql for node "test.ecommerce_analytics.not_null_mart_daily_sales_order_date.0e908a3de5"
+[0m10:05:58.020820 [debug] [Thread-2  ]: Writing runtime sql for node "test.ecommerce_analytics.not_null_mart_customer_orders_total_revenue.2fff1d6d64"
+[0m10:05:58.023440 [debug] [Thread-1  ]: Writing runtime sql for node "test.ecommerce_analytics.not_null_mart_customer_orders_customer_id.65556082dc"
+[0m10:05:58.029806 [debug] [Thread-4  ]: Writing runtime sql for node "test.ecommerce_analytics.not_null_mart_revenue_by_category_category.0607d31a2e"
+[0m10:05:58.042255 [debug] [Thread-1  ]: Using postgres connection "test.ecommerce_analytics.not_null_mart_customer_orders_customer_id.65556082dc"
+[0m10:05:58.044470 [debug] [Thread-1  ]: On test.ecommerce_analytics.not_null_mart_customer_orders_customer_id.65556082dc: BEGIN
+[0m10:05:58.046243 [debug] [Thread-4  ]: Using postgres connection "test.ecommerce_analytics.not_null_mart_revenue_by_category_category.0607d31a2e"
+[0m10:05:58.047570 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m10:05:58.049355 [debug] [Thread-3  ]: Using postgres connection "test.ecommerce_analytics.not_null_mart_daily_sales_order_date.0e908a3de5"
+[0m10:05:58.051467 [debug] [Thread-2  ]: Using postgres connection "test.ecommerce_analytics.not_null_mart_customer_orders_total_revenue.2fff1d6d64"
+[0m10:05:58.053288 [debug] [Thread-4  ]: On test.ecommerce_analytics.not_null_mart_revenue_by_category_category.0607d31a2e: BEGIN
+[0m10:05:58.056080 [debug] [Thread-3  ]: On test.ecommerce_analytics.not_null_mart_daily_sales_order_date.0e908a3de5: BEGIN
+[0m10:05:58.058374 [debug] [Thread-2  ]: On test.ecommerce_analytics.not_null_mart_customer_orders_total_revenue.2fff1d6d64: BEGIN
+[0m10:05:58.064953 [debug] [Thread-4  ]: Opening a new connection, currently in state init
+[0m10:05:58.066959 [debug] [Thread-3  ]: Opening a new connection, currently in state init
+[0m10:05:58.069405 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
+[0m10:05:58.071238 [debug] [Thread-1  ]: SQL status: BEGIN in 0.0 seconds
+[0m10:05:58.076993 [debug] [Thread-1  ]: Using postgres connection "test.ecommerce_analytics.not_null_mart_customer_orders_customer_id.65556082dc"
+[0m10:05:58.079063 [debug] [Thread-1  ]: On test.ecommerce_analytics.not_null_mart_customer_orders_customer_id.65556082dc: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "node_id": "test.ecommerce_analytics.not_null_mart_customer_orders_customer_id.65556082dc"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select customer_id
+from "airflow"."analytics_analytics"."mart_customer_orders"
+where customer_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m10:05:58.082326 [debug] [Thread-1  ]: SQL status: SELECT 1 in 0.0 seconds
+[0m10:05:58.088964 [debug] [Thread-1  ]: Timing info for test.ecommerce_analytics.not_null_mart_customer_orders_customer_id.65556082dc (execute): 10:05:57.952393 => 10:05:58.088072
+[0m10:05:58.091176 [debug] [Thread-1  ]: On test.ecommerce_analytics.not_null_mart_customer_orders_customer_id.65556082dc: ROLLBACK
+[0m10:05:58.093206 [debug] [Thread-4  ]: SQL status: BEGIN in 0.0 seconds
+[0m10:05:58.095080 [debug] [Thread-1  ]: On test.ecommerce_analytics.not_null_mart_customer_orders_customer_id.65556082dc: Close
+[0m10:05:58.096754 [debug] [Thread-3  ]: SQL status: BEGIN in 0.0 seconds
+[0m10:05:58.098077 [debug] [Thread-2  ]: SQL status: BEGIN in 0.0 seconds
+[0m10:05:58.099194 [debug] [Thread-4  ]: Using postgres connection "test.ecommerce_analytics.not_null_mart_revenue_by_category_category.0607d31a2e"
+[0m10:05:58.103633 [debug] [Thread-3  ]: Using postgres connection "test.ecommerce_analytics.not_null_mart_daily_sales_order_date.0e908a3de5"
+[0m10:05:58.102107 [info ] [Thread-1  ]: 1 of 6 PASS not_null_mart_customer_orders_customer_id .......................... [[32mPASS[0m in 0.38s]
+[0m10:05:58.106116 [debug] [Thread-2  ]: Using postgres connection "test.ecommerce_analytics.not_null_mart_customer_orders_total_revenue.2fff1d6d64"
+[0m10:05:58.107832 [debug] [Thread-4  ]: On test.ecommerce_analytics.not_null_mart_revenue_by_category_category.0607d31a2e: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "node_id": "test.ecommerce_analytics.not_null_mart_revenue_by_category_category.0607d31a2e"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select category
+from "airflow"."analytics_analytics"."mart_revenue_by_category"
+where category is null
+
+
+
+      
+    ) dbt_internal_test
+[0m10:05:58.109650 [debug] [Thread-3  ]: On test.ecommerce_analytics.not_null_mart_daily_sales_order_date.0e908a3de5: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "node_id": "test.ecommerce_analytics.not_null_mart_daily_sales_order_date.0e908a3de5"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select order_date
+from "airflow"."analytics_analytics"."mart_daily_sales"
+where order_date is null
+
+
+
+      
+    ) dbt_internal_test
+[0m10:05:58.111674 [debug] [Thread-1  ]: Finished running node test.ecommerce_analytics.not_null_mart_customer_orders_customer_id.65556082dc
+[0m10:05:58.113291 [debug] [Thread-2  ]: On test.ecommerce_analytics.not_null_mart_customer_orders_total_revenue.2fff1d6d64: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "node_id": "test.ecommerce_analytics.not_null_mart_customer_orders_total_revenue.2fff1d6d64"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select total_revenue
+from "airflow"."analytics_analytics"."mart_customer_orders"
+where total_revenue is null
+
+
+
+      
+    ) dbt_internal_test
+[0m10:05:58.117195 [debug] [Thread-4  ]: SQL status: SELECT 1 in 0.0 seconds
+[0m10:05:58.119497 [debug] [Thread-1  ]: Began running node test.ecommerce_analytics.unique_mart_customer_orders_customer_id.dd48be91bc
+[0m10:05:58.121151 [debug] [Thread-3  ]: SQL status: SELECT 1 in 0.0 seconds
+[0m10:05:58.127236 [debug] [Thread-4  ]: Timing info for test.ecommerce_analytics.not_null_mart_revenue_by_category_category.0607d31a2e (execute): 10:05:58.024268 => 10:05:58.126364
+[0m10:05:58.129014 [debug] [Thread-2  ]: SQL status: SELECT 1 in 0.0 seconds
+[0m10:05:58.130557 [info ] [Thread-1  ]: 5 of 6 START test unique_mart_customer_orders_customer_id ...................... [RUN]
+[0m10:05:58.135732 [debug] [Thread-3  ]: Timing info for test.ecommerce_analytics.not_null_mart_daily_sales_order_date.0e908a3de5 (execute): 10:05:57.913361 => 10:05:58.134816
+[0m10:05:58.138762 [debug] [Thread-4  ]: On test.ecommerce_analytics.not_null_mart_revenue_by_category_category.0607d31a2e: ROLLBACK
+[0m10:05:58.143608 [debug] [Thread-2  ]: Timing info for test.ecommerce_analytics.not_null_mart_customer_orders_total_revenue.2fff1d6d64 (execute): 10:05:58.011292 => 10:05:58.142829
+[0m10:05:58.146079 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.not_null_mart_customer_orders_customer_id.65556082dc, now test.ecommerce_analytics.unique_mart_customer_orders_customer_id.dd48be91bc)
+[0m10:05:58.148034 [debug] [Thread-3  ]: On test.ecommerce_analytics.not_null_mart_daily_sales_order_date.0e908a3de5: ROLLBACK
+[0m10:05:58.150498 [debug] [Thread-4  ]: On test.ecommerce_analytics.not_null_mart_revenue_by_category_category.0607d31a2e: Close
+[0m10:05:58.151940 [debug] [Thread-2  ]: On test.ecommerce_analytics.not_null_mart_customer_orders_total_revenue.2fff1d6d64: ROLLBACK
+[0m10:05:58.154987 [debug] [Thread-1  ]: Began compiling node test.ecommerce_analytics.unique_mart_customer_orders_customer_id.dd48be91bc
+[0m10:05:58.158014 [debug] [Thread-3  ]: On test.ecommerce_analytics.not_null_mart_daily_sales_order_date.0e908a3de5: Close
+[0m10:05:58.161168 [info ] [Thread-4  ]: 4 of 6 PASS not_null_mart_revenue_by_category_category ......................... [[32mPASS[0m in 0.43s]
+[0m10:05:58.165353 [debug] [Thread-2  ]: On test.ecommerce_analytics.not_null_mart_customer_orders_total_revenue.2fff1d6d64: Close
+[0m10:05:58.183977 [debug] [Thread-1  ]: Writing injected SQL for node "test.ecommerce_analytics.unique_mart_customer_orders_customer_id.dd48be91bc"
+[0m10:05:58.188604 [debug] [Thread-4  ]: Finished running node test.ecommerce_analytics.not_null_mart_revenue_by_category_category.0607d31a2e
+[0m10:05:58.186903 [info ] [Thread-3  ]: 3 of 6 PASS not_null_mart_daily_sales_order_date ............................... [[32mPASS[0m in 0.46s]
+[0m10:05:58.192541 [info ] [Thread-2  ]: 2 of 6 PASS not_null_mart_customer_orders_total_revenue ........................ [[32mPASS[0m in 0.47s]
+[0m10:05:58.195675 [debug] [Thread-4  ]: Began running node test.ecommerce_analytics.unique_mart_daily_sales_order_date.f90d005909
+[0m10:05:58.198883 [debug] [Thread-3  ]: Finished running node test.ecommerce_analytics.not_null_mart_daily_sales_order_date.0e908a3de5
+[0m10:05:58.201822 [debug] [Thread-2  ]: Finished running node test.ecommerce_analytics.not_null_mart_customer_orders_total_revenue.2fff1d6d64
+[0m10:05:58.203994 [info ] [Thread-4  ]: 6 of 6 START test unique_mart_daily_sales_order_date ........................... [RUN]
+[0m10:05:58.208766 [debug] [Thread-4  ]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.not_null_mart_revenue_by_category_category.0607d31a2e, now test.ecommerce_analytics.unique_mart_daily_sales_order_date.f90d005909)
+[0m10:05:58.210977 [debug] [Thread-4  ]: Began compiling node test.ecommerce_analytics.unique_mart_daily_sales_order_date.f90d005909
+[0m10:05:58.227583 [debug] [Thread-1  ]: Timing info for test.ecommerce_analytics.unique_mart_customer_orders_customer_id.dd48be91bc (compile): 10:05:58.166277 => 10:05:58.226961
+[0m10:05:58.226499 [debug] [Thread-4  ]: Writing injected SQL for node "test.ecommerce_analytics.unique_mart_daily_sales_order_date.f90d005909"
+[0m10:05:58.229725 [debug] [Thread-1  ]: Began executing node test.ecommerce_analytics.unique_mart_customer_orders_customer_id.dd48be91bc
+[0m10:05:58.243689 [debug] [Thread-1  ]: Writing runtime sql for node "test.ecommerce_analytics.unique_mart_customer_orders_customer_id.dd48be91bc"
+[0m10:05:58.256065 [debug] [Thread-4  ]: Timing info for test.ecommerce_analytics.unique_mart_daily_sales_order_date.f90d005909 (compile): 10:05:58.212388 => 10:05:58.255306
+[0m10:05:58.257907 [debug] [Thread-4  ]: Began executing node test.ecommerce_analytics.unique_mart_daily_sales_order_date.f90d005909
+[0m10:05:58.264472 [debug] [Thread-4  ]: Writing runtime sql for node "test.ecommerce_analytics.unique_mart_daily_sales_order_date.f90d005909"
+[0m10:05:58.266761 [debug] [Thread-1  ]: Using postgres connection "test.ecommerce_analytics.unique_mart_customer_orders_customer_id.dd48be91bc"
+[0m10:05:58.268766 [debug] [Thread-1  ]: On test.ecommerce_analytics.unique_mart_customer_orders_customer_id.dd48be91bc: BEGIN
+[0m10:05:58.270850 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m10:05:58.283616 [debug] [Thread-4  ]: Using postgres connection "test.ecommerce_analytics.unique_mart_daily_sales_order_date.f90d005909"
+[0m10:05:58.285900 [debug] [Thread-4  ]: On test.ecommerce_analytics.unique_mart_daily_sales_order_date.f90d005909: BEGIN
+[0m10:05:58.287687 [debug] [Thread-4  ]: Opening a new connection, currently in state closed
+[0m10:05:58.289699 [debug] [Thread-1  ]: SQL status: BEGIN in 0.0 seconds
+[0m10:05:58.292352 [debug] [Thread-1  ]: Using postgres connection "test.ecommerce_analytics.unique_mart_customer_orders_customer_id.dd48be91bc"
+[0m10:05:58.294182 [debug] [Thread-1  ]: On test.ecommerce_analytics.unique_mart_customer_orders_customer_id.dd48be91bc: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "node_id": "test.ecommerce_analytics.unique_mart_customer_orders_customer_id.dd48be91bc"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    customer_id as unique_field,
+    count(*) as n_records
+
+from "airflow"."analytics_analytics"."mart_customer_orders"
+where customer_id is not null
+group by customer_id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m10:05:58.297971 [debug] [Thread-1  ]: SQL status: SELECT 1 in 0.0 seconds
+[0m10:05:58.302513 [debug] [Thread-1  ]: Timing info for test.ecommerce_analytics.unique_mart_customer_orders_customer_id.dd48be91bc (execute): 10:05:58.231841 => 10:05:58.301683
+[0m10:05:58.304051 [debug] [Thread-1  ]: On test.ecommerce_analytics.unique_mart_customer_orders_customer_id.dd48be91bc: ROLLBACK
+[0m10:05:58.305989 [debug] [Thread-1  ]: On test.ecommerce_analytics.unique_mart_customer_orders_customer_id.dd48be91bc: Close
+[0m10:05:58.309463 [info ] [Thread-1  ]: 5 of 6 PASS unique_mart_customer_orders_customer_id ............................ [[32mPASS[0m in 0.16s]
+[0m10:05:58.311588 [debug] [Thread-4  ]: SQL status: BEGIN in 0.0 seconds
+[0m10:05:58.313271 [debug] [Thread-1  ]: Finished running node test.ecommerce_analytics.unique_mart_customer_orders_customer_id.dd48be91bc
+[0m10:05:58.315114 [debug] [Thread-4  ]: Using postgres connection "test.ecommerce_analytics.unique_mart_daily_sales_order_date.f90d005909"
+[0m10:05:58.318316 [debug] [Thread-4  ]: On test.ecommerce_analytics.unique_mart_daily_sales_order_date.f90d005909: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "node_id": "test.ecommerce_analytics.unique_mart_daily_sales_order_date.f90d005909"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    order_date as unique_field,
+    count(*) as n_records
+
+from "airflow"."analytics_analytics"."mart_daily_sales"
+where order_date is not null
+group by order_date
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m10:05:58.323409 [debug] [Thread-4  ]: SQL status: SELECT 1 in 0.0 seconds
+[0m10:05:58.327206 [debug] [Thread-4  ]: Timing info for test.ecommerce_analytics.unique_mart_daily_sales_order_date.f90d005909 (execute): 10:05:58.259385 => 10:05:58.326584
+[0m10:05:58.328982 [debug] [Thread-4  ]: On test.ecommerce_analytics.unique_mart_daily_sales_order_date.f90d005909: ROLLBACK
+[0m10:05:58.331256 [debug] [Thread-4  ]: On test.ecommerce_analytics.unique_mart_daily_sales_order_date.f90d005909: Close
+[0m10:05:58.333891 [info ] [Thread-4  ]: 6 of 6 PASS unique_mart_daily_sales_order_date ................................. [[32mPASS[0m in 0.13s]
+[0m10:05:58.337197 [debug] [Thread-4  ]: Finished running node test.ecommerce_analytics.unique_mart_daily_sales_order_date.f90d005909
+[0m10:05:58.343187 [debug] [MainThread]: Using postgres connection "master"
+[0m10:05:58.345391 [debug] [MainThread]: On master: BEGIN
+[0m10:05:58.346966 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m10:05:58.363235 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m10:05:58.370694 [debug] [MainThread]: On master: COMMIT
+[0m10:05:58.376416 [debug] [MainThread]: Using postgres connection "master"
+[0m10:05:58.380634 [debug] [MainThread]: On master: COMMIT
+[0m10:05:58.382733 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m10:05:58.384325 [debug] [MainThread]: On master: Close
+[0m10:05:58.386606 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:05:58.388078 [debug] [MainThread]: Connection 'test.ecommerce_analytics.not_null_mart_customer_orders_total_revenue.2fff1d6d64' was properly closed.
+[0m10:05:58.389646 [debug] [MainThread]: Connection 'test.ecommerce_analytics.unique_mart_customer_orders_customer_id.dd48be91bc' was properly closed.
+[0m10:05:58.390956 [debug] [MainThread]: Connection 'test.ecommerce_analytics.not_null_mart_daily_sales_order_date.0e908a3de5' was properly closed.
+[0m10:05:58.392464 [debug] [MainThread]: Connection 'test.ecommerce_analytics.unique_mart_daily_sales_order_date.f90d005909' was properly closed.
+[0m10:05:58.393905 [info ] [MainThread]: 
+[0m10:05:58.395539 [info ] [MainThread]: Finished running 6 tests in 0 hours 0 minutes and 0.92 seconds (0.92s).
+[0m10:05:58.399365 [debug] [MainThread]: Command end result
+[0m10:05:58.445596 [info ] [MainThread]: 
+[0m10:05:58.447156 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m10:05:58.448794 [info ] [MainThread]: 
+[0m10:05:58.450559 [info ] [MainThread]: Done. PASS=6 WARN=0 ERROR=0 SKIP=0 TOTAL=6
+[0m10:05:58.453679 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 2.6908858, "process_user_time": 7.017798, "process_kernel_time": 0.609716, "process_mem_max_rss": "124228", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m10:05:58.455648 [debug] [MainThread]: Command `dbt test` succeeded at 10:05:58.455274 after 2.69 seconds
+[0m10:05:58.457249 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7352455da3d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x735242c6e130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x735242958400>]}
+[0m10:05:58.458800 [debug] [MainThread]: Flushing usage events
+[0m10:06:06.023682 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x721648f70100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x721646d93a90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x721646d93730>]}
+
+
+============================== 10:06:06.034222 | 3aef8304-1371-4fe0-a2ea-0ff41c58be56 ==============================
+[0m10:06:06.034222 [info ] [MainThread]: Running with dbt=1.7.0
+[0m10:06:06.035554 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '.', 'version_check': 'True', 'debug': 'False', 'log_path': '/opt/airflow/dbt_project/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt docs generate --profiles-dir .', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m10:06:06.418712 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3aef8304-1371-4fe0-a2ea-0ff41c58be56', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x721646da65b0>]}
+[0m10:06:06.563978 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '3aef8304-1371-4fe0-a2ea-0ff41c58be56', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x721646348a00>]}
+[0m10:06:06.565755 [info ] [MainThread]: Registered adapter: postgres=1.7.0
+[0m10:06:06.589888 [debug] [MainThread]: checksum: 8434eacd4ffdf0ca3ab22bf0e2d55b45306c9599613e842b959405abc489e606, vars: {}, profile: , target: , version: 1.7.0
+[0m10:06:06.890711 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m10:06:06.891932 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m10:06:06.901993 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '3aef8304-1371-4fe0-a2ea-0ff41c58be56', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x721645bf4f10>]}
+[0m10:06:06.921644 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '3aef8304-1371-4fe0-a2ea-0ff41c58be56', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x721645ef6d00>]}
+[0m10:06:06.922982 [info ] [MainThread]: Found 6 models, 17 tests, 0 sources, 0 exposures, 0 metrics, 401 macros, 0 groups, 0 semantic models
+[0m10:06:06.924102 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3aef8304-1371-4fe0-a2ea-0ff41c58be56', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x721645ef6e20>]}
+[0m10:06:06.928243 [info ] [MainThread]: 
+[0m10:06:06.930205 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m10:06:06.932772 [debug] [ThreadPool]: Acquiring new postgres connection 'list_airflow_analytics_analytics'
+[0m10:06:06.934326 [debug] [ThreadPool]: Acquiring new postgres connection 'list_airflow_analytics_staging'
+[0m10:06:06.956026 [debug] [ThreadPool]: Using postgres connection "list_airflow_analytics_staging"
+[0m10:06:06.963067 [debug] [ThreadPool]: Using postgres connection "list_airflow_analytics_analytics"
+[0m10:06:06.963782 [debug] [ThreadPool]: On list_airflow_analytics_staging: BEGIN
+[0m10:06:06.964859 [debug] [ThreadPool]: On list_airflow_analytics_analytics: BEGIN
+[0m10:06:06.965881 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:06:06.966987 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:06:06.978749 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m10:06:06.979687 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m10:06:06.980760 [debug] [ThreadPool]: Using postgres connection "list_airflow_analytics_analytics"
+[0m10:06:06.981977 [debug] [ThreadPool]: Using postgres connection "list_airflow_analytics_staging"
+[0m10:06:06.983073 [debug] [ThreadPool]: On list_airflow_analytics_analytics: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "connection_name": "list_airflow_analytics_analytics"} */
+select
+      'airflow' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics_analytics'
+    union all
+    select
+      'airflow' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics_analytics'
+    union all
+    select
+      'airflow' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics_analytics'
+  
+[0m10:06:06.984145 [debug] [ThreadPool]: On list_airflow_analytics_staging: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "connection_name": "list_airflow_analytics_staging"} */
+select
+      'airflow' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics_staging'
+    union all
+    select
+      'airflow' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics_staging'
+    union all
+    select
+      'airflow' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics_staging'
+  
+[0m10:06:06.988987 [debug] [ThreadPool]: SQL status: SELECT 3 in 0.0 seconds
+[0m10:06:06.989764 [debug] [ThreadPool]: SQL status: SELECT 3 in 0.0 seconds
+[0m10:06:06.991907 [debug] [ThreadPool]: On list_airflow_analytics_analytics: ROLLBACK
+[0m10:06:06.994574 [debug] [ThreadPool]: On list_airflow_analytics_staging: ROLLBACK
+[0m10:06:06.996454 [debug] [ThreadPool]: On list_airflow_analytics_analytics: Close
+[0m10:06:06.997650 [debug] [ThreadPool]: On list_airflow_analytics_staging: Close
+[0m10:06:07.008346 [debug] [MainThread]: Using postgres connection "master"
+[0m10:06:07.009736 [debug] [MainThread]: On master: BEGIN
+[0m10:06:07.010978 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:06:07.022597 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m10:06:07.023966 [debug] [MainThread]: Using postgres connection "master"
+[0m10:06:07.025261 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m10:06:07.057442 [debug] [MainThread]: SQL status: SELECT 3 in 0.0 seconds
+[0m10:06:07.059955 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3aef8304-1371-4fe0-a2ea-0ff41c58be56', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x721646692a60>]}
+[0m10:06:07.061339 [debug] [MainThread]: On master: ROLLBACK
+[0m10:06:07.063139 [debug] [MainThread]: On master: Close
+[0m10:06:07.065115 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m10:06:07.066391 [info ] [MainThread]: 
+[0m10:06:07.079821 [debug] [Thread-1  ]: Began running node model.ecommerce_analytics.stg_customers
+[0m10:06:07.080902 [debug] [Thread-2  ]: Began running node model.ecommerce_analytics.stg_orders
+[0m10:06:07.081809 [debug] [Thread-3  ]: Began running node model.ecommerce_analytics.stg_products
+[0m10:06:07.082943 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_airflow_analytics_staging, now model.ecommerce_analytics.stg_customers)
+[0m10:06:07.084592 [debug] [Thread-2  ]: Re-using an available connection from the pool (formerly list_airflow_analytics_analytics, now model.ecommerce_analytics.stg_orders)
+[0m10:06:07.086337 [debug] [Thread-3  ]: Acquiring new postgres connection 'model.ecommerce_analytics.stg_products'
+[0m10:06:07.087502 [debug] [Thread-1  ]: Began compiling node model.ecommerce_analytics.stg_customers
+[0m10:06:07.088762 [debug] [Thread-2  ]: Began compiling node model.ecommerce_analytics.stg_orders
+[0m10:06:07.089988 [debug] [Thread-3  ]: Began compiling node model.ecommerce_analytics.stg_products
+[0m10:06:07.101358 [debug] [Thread-1  ]: Writing injected SQL for node "model.ecommerce_analytics.stg_customers"
+[0m10:06:07.104314 [debug] [Thread-2  ]: Writing injected SQL for node "model.ecommerce_analytics.stg_orders"
+[0m10:06:07.107804 [debug] [Thread-3  ]: Writing injected SQL for node "model.ecommerce_analytics.stg_products"
+[0m10:06:07.119241 [debug] [Thread-1  ]: Timing info for model.ecommerce_analytics.stg_customers (compile): 10:06:07.090953 => 10:06:07.118656
+[0m10:06:07.120389 [debug] [Thread-2  ]: Timing info for model.ecommerce_analytics.stg_orders (compile): 10:06:07.101954 => 10:06:07.119960
+[0m10:06:07.121362 [debug] [Thread-1  ]: Began executing node model.ecommerce_analytics.stg_customers
+[0m10:06:07.122568 [debug] [Thread-3  ]: Timing info for model.ecommerce_analytics.stg_products (compile): 10:06:07.105461 => 10:06:07.122114
+[0m10:06:07.123388 [debug] [Thread-2  ]: Began executing node model.ecommerce_analytics.stg_orders
+[0m10:06:07.124843 [debug] [Thread-1  ]: Timing info for model.ecommerce_analytics.stg_customers (execute): 10:06:07.124323 => 10:06:07.124345
+[0m10:06:07.126253 [debug] [Thread-3  ]: Began executing node model.ecommerce_analytics.stg_products
+[0m10:06:07.128904 [debug] [Thread-2  ]: Timing info for model.ecommerce_analytics.stg_orders (execute): 10:06:07.128091 => 10:06:07.128140
+[0m10:06:07.131765 [debug] [Thread-1  ]: Finished running node model.ecommerce_analytics.stg_customers
+[0m10:06:07.133328 [debug] [Thread-3  ]: Timing info for model.ecommerce_analytics.stg_products (execute): 10:06:07.132824 => 10:06:07.132844
+[0m10:06:07.135659 [debug] [Thread-2  ]: Finished running node model.ecommerce_analytics.stg_orders
+[0m10:06:07.138186 [debug] [Thread-4  ]: Began running node test.ecommerce_analytics.not_null_stg_customers_customer_id.e2cfb1f9aa
+[0m10:06:07.140060 [debug] [Thread-3  ]: Finished running node model.ecommerce_analytics.stg_products
+[0m10:06:07.140931 [debug] [Thread-1  ]: Began running node test.ecommerce_analytics.not_null_stg_customers_email.d7cf761533
+[0m10:06:07.142508 [debug] [Thread-2  ]: Began running node test.ecommerce_analytics.unique_stg_customers_customer_id.c7614daada
+[0m10:06:07.145433 [debug] [Thread-4  ]: Acquiring new postgres connection 'test.ecommerce_analytics.not_null_stg_customers_customer_id.e2cfb1f9aa'
+[0m10:06:07.147435 [debug] [Thread-3  ]: Began running node test.ecommerce_analytics.unique_stg_customers_email.1ebcb2333e
+[0m10:06:07.149341 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.stg_customers, now test.ecommerce_analytics.not_null_stg_customers_email.d7cf761533)
+[0m10:06:07.151180 [debug] [Thread-2  ]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.stg_orders, now test.ecommerce_analytics.unique_stg_customers_customer_id.c7614daada)
+[0m10:06:07.152714 [debug] [Thread-4  ]: Began compiling node test.ecommerce_analytics.not_null_stg_customers_customer_id.e2cfb1f9aa
+[0m10:06:07.154478 [debug] [Thread-3  ]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.stg_products, now test.ecommerce_analytics.unique_stg_customers_email.1ebcb2333e)
+[0m10:06:07.155915 [debug] [Thread-1  ]: Began compiling node test.ecommerce_analytics.not_null_stg_customers_email.d7cf761533
+[0m10:06:07.157359 [debug] [Thread-2  ]: Began compiling node test.ecommerce_analytics.unique_stg_customers_customer_id.c7614daada
+[0m10:06:07.170498 [debug] [Thread-3  ]: Began compiling node test.ecommerce_analytics.unique_stg_customers_email.1ebcb2333e
+[0m10:06:07.181891 [debug] [Thread-4  ]: Writing injected SQL for node "test.ecommerce_analytics.not_null_stg_customers_customer_id.e2cfb1f9aa"
+[0m10:06:07.190139 [debug] [Thread-1  ]: Writing injected SQL for node "test.ecommerce_analytics.not_null_stg_customers_email.d7cf761533"
+[0m10:06:07.207976 [debug] [Thread-2  ]: Writing injected SQL for node "test.ecommerce_analytics.unique_stg_customers_customer_id.c7614daada"
+[0m10:06:07.213316 [debug] [Thread-3  ]: Writing injected SQL for node "test.ecommerce_analytics.unique_stg_customers_email.1ebcb2333e"
+[0m10:06:07.225273 [debug] [Thread-2  ]: Timing info for test.ecommerce_analytics.unique_stg_customers_customer_id.c7614daada (compile): 10:06:07.190921 => 10:06:07.224632
+[0m10:06:07.226923 [debug] [Thread-2  ]: Began executing node test.ecommerce_analytics.unique_stg_customers_customer_id.c7614daada
+[0m10:06:07.229237 [debug] [Thread-2  ]: Timing info for test.ecommerce_analytics.unique_stg_customers_customer_id.c7614daada (execute): 10:06:07.228203 => 10:06:07.228247
+[0m10:06:07.230951 [debug] [Thread-1  ]: Timing info for test.ecommerce_analytics.not_null_stg_customers_email.d7cf761533 (compile): 10:06:07.182528 => 10:06:07.230410
+[0m10:06:07.232977 [debug] [Thread-2  ]: Finished running node test.ecommerce_analytics.unique_stg_customers_customer_id.c7614daada
+[0m10:06:07.234091 [debug] [Thread-3  ]: Timing info for test.ecommerce_analytics.unique_stg_customers_email.1ebcb2333e (compile): 10:06:07.202021 => 10:06:07.233582
+[0m10:06:07.235290 [debug] [Thread-4  ]: Timing info for test.ecommerce_analytics.not_null_stg_customers_customer_id.e2cfb1f9aa (compile): 10:06:07.158400 => 10:06:07.234787
+[0m10:06:07.236186 [debug] [Thread-1  ]: Began executing node test.ecommerce_analytics.not_null_stg_customers_email.d7cf761533
+[0m10:06:07.237849 [debug] [Thread-2  ]: Began running node model.ecommerce_analytics.mart_customer_orders
+[0m10:06:07.239294 [debug] [Thread-3  ]: Began executing node test.ecommerce_analytics.unique_stg_customers_email.1ebcb2333e
+[0m10:06:07.240854 [debug] [Thread-4  ]: Began executing node test.ecommerce_analytics.not_null_stg_customers_customer_id.e2cfb1f9aa
+[0m10:06:07.242532 [debug] [Thread-1  ]: Timing info for test.ecommerce_analytics.not_null_stg_customers_email.d7cf761533 (execute): 10:06:07.241977 => 10:06:07.242002
+[0m10:06:07.245356 [debug] [Thread-2  ]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.unique_stg_customers_customer_id.c7614daada, now model.ecommerce_analytics.mart_customer_orders)
+[0m10:06:07.247758 [debug] [Thread-3  ]: Timing info for test.ecommerce_analytics.unique_stg_customers_email.1ebcb2333e (execute): 10:06:07.247080 => 10:06:07.247150
+[0m10:06:07.249711 [debug] [Thread-4  ]: Timing info for test.ecommerce_analytics.not_null_stg_customers_customer_id.e2cfb1f9aa (execute): 10:06:07.248932 => 10:06:07.248963
+[0m10:06:07.253491 [debug] [Thread-1  ]: Finished running node test.ecommerce_analytics.not_null_stg_customers_email.d7cf761533
+[0m10:06:07.255480 [debug] [Thread-2  ]: Began compiling node model.ecommerce_analytics.mart_customer_orders
+[0m10:06:07.258688 [debug] [Thread-3  ]: Finished running node test.ecommerce_analytics.unique_stg_customers_email.1ebcb2333e
+[0m10:06:07.261957 [debug] [Thread-4  ]: Finished running node test.ecommerce_analytics.not_null_stg_customers_customer_id.e2cfb1f9aa
+[0m10:06:07.264400 [debug] [Thread-1  ]: Began running node model.ecommerce_analytics.mart_daily_sales
+[0m10:06:07.271387 [debug] [Thread-2  ]: Writing injected SQL for node "model.ecommerce_analytics.mart_customer_orders"
+[0m10:06:07.272689 [debug] [Thread-3  ]: Began running node test.ecommerce_analytics.accepted_values_stg_orders_status__completed__cancelled__pending.ee383a7b32
+[0m10:06:07.274331 [debug] [Thread-4  ]: Began running node test.ecommerce_analytics.not_null_stg_orders_customer_id.af79d5e4b5
+[0m10:06:07.276303 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.not_null_stg_customers_email.d7cf761533, now model.ecommerce_analytics.mart_daily_sales)
+[0m10:06:07.280026 [debug] [Thread-3  ]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.unique_stg_customers_email.1ebcb2333e, now test.ecommerce_analytics.accepted_values_stg_orders_status__completed__cancelled__pending.ee383a7b32)
+[0m10:06:07.282070 [debug] [Thread-4  ]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.not_null_stg_customers_customer_id.e2cfb1f9aa, now test.ecommerce_analytics.not_null_stg_orders_customer_id.af79d5e4b5)
+[0m10:06:07.283630 [debug] [Thread-1  ]: Began compiling node model.ecommerce_analytics.mart_daily_sales
+[0m10:06:07.285136 [debug] [Thread-3  ]: Began compiling node test.ecommerce_analytics.accepted_values_stg_orders_status__completed__cancelled__pending.ee383a7b32
+[0m10:06:07.286642 [debug] [Thread-4  ]: Began compiling node test.ecommerce_analytics.not_null_stg_orders_customer_id.af79d5e4b5
+[0m10:06:07.294870 [debug] [Thread-1  ]: Writing injected SQL for node "model.ecommerce_analytics.mart_daily_sales"
+[0m10:06:07.318456 [debug] [Thread-2  ]: Timing info for model.ecommerce_analytics.mart_customer_orders (compile): 10:06:07.265806 => 10:06:07.317851
+[0m10:06:07.322628 [debug] [Thread-3  ]: Writing injected SQL for node "test.ecommerce_analytics.accepted_values_stg_orders_status__completed__cancelled__pending.ee383a7b32"
+[0m10:06:07.327964 [debug] [Thread-4  ]: Writing injected SQL for node "test.ecommerce_analytics.not_null_stg_orders_customer_id.af79d5e4b5"
+[0m10:06:07.330410 [debug] [Thread-2  ]: Began executing node model.ecommerce_analytics.mart_customer_orders
+[0m10:06:07.334210 [debug] [Thread-2  ]: Timing info for model.ecommerce_analytics.mart_customer_orders (execute): 10:06:07.333281 => 10:06:07.333317
+[0m10:06:07.338005 [debug] [Thread-2  ]: Finished running node model.ecommerce_analytics.mart_customer_orders
+[0m10:06:07.343970 [debug] [Thread-2  ]: Began running node test.ecommerce_analytics.not_null_stg_orders_order_id.81cfe2fe64
+[0m10:06:07.348406 [debug] [Thread-2  ]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.mart_customer_orders, now test.ecommerce_analytics.not_null_stg_orders_order_id.81cfe2fe64)
+[0m10:06:07.350443 [debug] [Thread-1  ]: Timing info for model.ecommerce_analytics.mart_daily_sales (compile): 10:06:07.287843 => 10:06:07.349434
+[0m10:06:07.351995 [debug] [Thread-3  ]: Timing info for test.ecommerce_analytics.accepted_values_stg_orders_status__completed__cancelled__pending.ee383a7b32 (compile): 10:06:07.295894 => 10:06:07.351163
+[0m10:06:07.353977 [debug] [Thread-2  ]: Began compiling node test.ecommerce_analytics.not_null_stg_orders_order_id.81cfe2fe64
+[0m10:06:07.356743 [debug] [Thread-1  ]: Began executing node model.ecommerce_analytics.mart_daily_sales
+[0m10:06:07.358810 [debug] [Thread-4  ]: Timing info for test.ecommerce_analytics.not_null_stg_orders_customer_id.af79d5e4b5 (compile): 10:06:07.312707 => 10:06:07.358171
+[0m10:06:07.360992 [debug] [Thread-3  ]: Began executing node test.ecommerce_analytics.accepted_values_stg_orders_status__completed__cancelled__pending.ee383a7b32
+[0m10:06:07.371654 [debug] [Thread-2  ]: Writing injected SQL for node "test.ecommerce_analytics.not_null_stg_orders_order_id.81cfe2fe64"
+[0m10:06:07.373077 [debug] [Thread-1  ]: Timing info for model.ecommerce_analytics.mart_daily_sales (execute): 10:06:07.372386 => 10:06:07.372411
+[0m10:06:07.374709 [debug] [Thread-4  ]: Began executing node test.ecommerce_analytics.not_null_stg_orders_customer_id.af79d5e4b5
+[0m10:06:07.376372 [debug] [Thread-3  ]: Timing info for test.ecommerce_analytics.accepted_values_stg_orders_status__completed__cancelled__pending.ee383a7b32 (execute): 10:06:07.375780 => 10:06:07.375807
+[0m10:06:07.380498 [debug] [Thread-1  ]: Finished running node model.ecommerce_analytics.mart_daily_sales
+[0m10:06:07.382761 [debug] [Thread-4  ]: Timing info for test.ecommerce_analytics.not_null_stg_orders_customer_id.af79d5e4b5 (execute): 10:06:07.382127 => 10:06:07.382151
+[0m10:06:07.385494 [debug] [Thread-3  ]: Finished running node test.ecommerce_analytics.accepted_values_stg_orders_status__completed__cancelled__pending.ee383a7b32
+[0m10:06:07.387519 [debug] [Thread-1  ]: Began running node test.ecommerce_analytics.not_null_stg_orders_product_id.034adb910e
+[0m10:06:07.390795 [debug] [Thread-4  ]: Finished running node test.ecommerce_analytics.not_null_stg_orders_customer_id.af79d5e4b5
+[0m10:06:07.393136 [debug] [Thread-3  ]: Began running node test.ecommerce_analytics.unique_stg_orders_order_id.e3b841c71a
+[0m10:06:07.396167 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.mart_daily_sales, now test.ecommerce_analytics.not_null_stg_orders_product_id.034adb910e)
+[0m10:06:07.398458 [debug] [Thread-4  ]: Began running node model.ecommerce_analytics.mart_revenue_by_category
+[0m10:06:07.400843 [debug] [Thread-3  ]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.accepted_values_stg_orders_status__completed__cancelled__pending.ee383a7b32, now test.ecommerce_analytics.unique_stg_orders_order_id.e3b841c71a)
+[0m10:06:07.402481 [debug] [Thread-1  ]: Began compiling node test.ecommerce_analytics.not_null_stg_orders_product_id.034adb910e
+[0m10:06:07.404458 [debug] [Thread-4  ]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.not_null_stg_orders_customer_id.af79d5e4b5, now model.ecommerce_analytics.mart_revenue_by_category)
+[0m10:06:07.405898 [debug] [Thread-2  ]: Timing info for test.ecommerce_analytics.not_null_stg_orders_order_id.81cfe2fe64 (compile): 10:06:07.362540 => 10:06:07.405329
+[0m10:06:07.406823 [debug] [Thread-3  ]: Began compiling node test.ecommerce_analytics.unique_stg_orders_order_id.e3b841c71a
+[0m10:06:07.419457 [debug] [Thread-4  ]: Began compiling node model.ecommerce_analytics.mart_revenue_by_category
+[0m10:06:07.418492 [debug] [Thread-1  ]: Writing injected SQL for node "test.ecommerce_analytics.not_null_stg_orders_product_id.034adb910e"
+[0m10:06:07.422476 [debug] [Thread-2  ]: Began executing node test.ecommerce_analytics.not_null_stg_orders_order_id.81cfe2fe64
+[0m10:06:07.435845 [debug] [Thread-3  ]: Writing injected SQL for node "test.ecommerce_analytics.unique_stg_orders_order_id.e3b841c71a"
+[0m10:06:07.447471 [debug] [Thread-4  ]: Writing injected SQL for node "model.ecommerce_analytics.mart_revenue_by_category"
+[0m10:06:07.450057 [debug] [Thread-2  ]: Timing info for test.ecommerce_analytics.not_null_stg_orders_order_id.81cfe2fe64 (execute): 10:06:07.449199 => 10:06:07.449228
+[0m10:06:07.454407 [debug] [Thread-2  ]: Finished running node test.ecommerce_analytics.not_null_stg_orders_order_id.81cfe2fe64
+[0m10:06:07.456370 [debug] [Thread-2  ]: Began running node test.ecommerce_analytics.not_null_stg_products_product_id.6373b0acf3
+[0m10:06:07.458688 [debug] [Thread-2  ]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.not_null_stg_orders_order_id.81cfe2fe64, now test.ecommerce_analytics.not_null_stg_products_product_id.6373b0acf3)
+[0m10:06:07.461086 [debug] [Thread-2  ]: Began compiling node test.ecommerce_analytics.not_null_stg_products_product_id.6373b0acf3
+[0m10:06:07.462704 [debug] [Thread-3  ]: Timing info for test.ecommerce_analytics.unique_stg_orders_order_id.e3b841c71a (compile): 10:06:07.423663 => 10:06:07.462061
+[0m10:06:07.472212 [debug] [Thread-2  ]: Writing injected SQL for node "test.ecommerce_analytics.not_null_stg_products_product_id.6373b0acf3"
+[0m10:06:07.473331 [debug] [Thread-3  ]: Began executing node test.ecommerce_analytics.unique_stg_orders_order_id.e3b841c71a
+[0m10:06:07.474520 [debug] [Thread-1  ]: Timing info for test.ecommerce_analytics.not_null_stg_orders_product_id.034adb910e (compile): 10:06:07.407885 => 10:06:07.474021
+[0m10:06:07.476880 [debug] [Thread-4  ]: Timing info for model.ecommerce_analytics.mart_revenue_by_category (compile): 10:06:07.437264 => 10:06:07.475938
+[0m10:06:07.478525 [debug] [Thread-3  ]: Timing info for test.ecommerce_analytics.unique_stg_orders_order_id.e3b841c71a (execute): 10:06:07.477809 => 10:06:07.477842
+[0m10:06:07.480168 [debug] [Thread-1  ]: Began executing node test.ecommerce_analytics.not_null_stg_orders_product_id.034adb910e
+[0m10:06:07.481992 [debug] [Thread-4  ]: Began executing node model.ecommerce_analytics.mart_revenue_by_category
+[0m10:06:07.484800 [debug] [Thread-3  ]: Finished running node test.ecommerce_analytics.unique_stg_orders_order_id.e3b841c71a
+[0m10:06:07.486510 [debug] [Thread-1  ]: Timing info for test.ecommerce_analytics.not_null_stg_orders_product_id.034adb910e (execute): 10:06:07.485939 => 10:06:07.485961
+[0m10:06:07.488100 [debug] [Thread-4  ]: Timing info for model.ecommerce_analytics.mart_revenue_by_category (execute): 10:06:07.487538 => 10:06:07.487560
+[0m10:06:07.489859 [debug] [Thread-3  ]: Began running node test.ecommerce_analytics.unique_stg_products_product_id.7d950a1467
+[0m10:06:07.493061 [debug] [Thread-1  ]: Finished running node test.ecommerce_analytics.not_null_stg_orders_product_id.034adb910e
+[0m10:06:07.494671 [debug] [Thread-2  ]: Timing info for test.ecommerce_analytics.not_null_stg_products_product_id.6373b0acf3 (compile): 10:06:07.463511 => 10:06:07.494002
+[0m10:06:07.497010 [debug] [Thread-4  ]: Finished running node model.ecommerce_analytics.mart_revenue_by_category
+[0m10:06:07.499060 [debug] [Thread-3  ]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.unique_stg_orders_order_id.e3b841c71a, now test.ecommerce_analytics.unique_stg_products_product_id.7d950a1467)
+[0m10:06:07.500875 [debug] [Thread-1  ]: Began running node test.ecommerce_analytics.not_null_mart_customer_orders_customer_id.65556082dc
+[0m10:06:07.502322 [debug] [Thread-2  ]: Began executing node test.ecommerce_analytics.not_null_stg_products_product_id.6373b0acf3
+[0m10:06:07.503821 [debug] [Thread-4  ]: Began running node test.ecommerce_analytics.not_null_mart_customer_orders_total_revenue.2fff1d6d64
+[0m10:06:07.505303 [debug] [Thread-3  ]: Began compiling node test.ecommerce_analytics.unique_stg_products_product_id.7d950a1467
+[0m10:06:07.507215 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.not_null_stg_orders_product_id.034adb910e, now test.ecommerce_analytics.not_null_mart_customer_orders_customer_id.65556082dc)
+[0m10:06:07.509020 [debug] [Thread-2  ]: Timing info for test.ecommerce_analytics.not_null_stg_products_product_id.6373b0acf3 (execute): 10:06:07.508219 => 10:06:07.508240
+[0m10:06:07.511011 [debug] [Thread-4  ]: Re-using an available connection from the pool (formerly model.ecommerce_analytics.mart_revenue_by_category, now test.ecommerce_analytics.not_null_mart_customer_orders_total_revenue.2fff1d6d64)
+[0m10:06:07.520919 [debug] [Thread-3  ]: Writing injected SQL for node "test.ecommerce_analytics.unique_stg_products_product_id.7d950a1467"
+[0m10:06:07.521957 [debug] [Thread-1  ]: Began compiling node test.ecommerce_analytics.not_null_mart_customer_orders_customer_id.65556082dc
+[0m10:06:07.524293 [debug] [Thread-2  ]: Finished running node test.ecommerce_analytics.not_null_stg_products_product_id.6373b0acf3
+[0m10:06:07.525973 [debug] [Thread-4  ]: Began compiling node test.ecommerce_analytics.not_null_mart_customer_orders_total_revenue.2fff1d6d64
+[0m10:06:07.539859 [debug] [Thread-2  ]: Began running node test.ecommerce_analytics.unique_mart_customer_orders_customer_id.dd48be91bc
+[0m10:06:07.541015 [debug] [Thread-1  ]: Writing injected SQL for node "test.ecommerce_analytics.not_null_mart_customer_orders_customer_id.65556082dc"
+[0m10:06:07.549091 [debug] [Thread-3  ]: Timing info for test.ecommerce_analytics.unique_stg_products_product_id.7d950a1467 (compile): 10:06:07.512197 => 10:06:07.548271
+[0m10:06:07.553657 [debug] [Thread-4  ]: Writing injected SQL for node "test.ecommerce_analytics.not_null_mart_customer_orders_total_revenue.2fff1d6d64"
+[0m10:06:07.555416 [debug] [Thread-2  ]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.not_null_stg_products_product_id.6373b0acf3, now test.ecommerce_analytics.unique_mart_customer_orders_customer_id.dd48be91bc)
+[0m10:06:07.557577 [debug] [Thread-3  ]: Began executing node test.ecommerce_analytics.unique_stg_products_product_id.7d950a1467
+[0m10:06:07.559967 [debug] [Thread-2  ]: Began compiling node test.ecommerce_analytics.unique_mart_customer_orders_customer_id.dd48be91bc
+[0m10:06:07.562883 [debug] [Thread-3  ]: Timing info for test.ecommerce_analytics.unique_stg_products_product_id.7d950a1467 (execute): 10:06:07.561605 => 10:06:07.561695
+[0m10:06:07.577346 [debug] [Thread-2  ]: Writing injected SQL for node "test.ecommerce_analytics.unique_mart_customer_orders_customer_id.dd48be91bc"
+[0m10:06:07.581540 [debug] [Thread-3  ]: Finished running node test.ecommerce_analytics.unique_stg_products_product_id.7d950a1467
+[0m10:06:07.584130 [debug] [Thread-1  ]: Timing info for test.ecommerce_analytics.not_null_mart_customer_orders_customer_id.65556082dc (compile): 10:06:07.527784 => 10:06:07.583371
+[0m10:06:07.585945 [debug] [Thread-3  ]: Began running node test.ecommerce_analytics.not_null_mart_daily_sales_order_date.0e908a3de5
+[0m10:06:07.587684 [debug] [Thread-1  ]: Began executing node test.ecommerce_analytics.not_null_mart_customer_orders_customer_id.65556082dc
+[0m10:06:07.590253 [debug] [Thread-3  ]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.unique_stg_products_product_id.7d950a1467, now test.ecommerce_analytics.not_null_mart_daily_sales_order_date.0e908a3de5)
+[0m10:06:07.592736 [debug] [Thread-4  ]: Timing info for test.ecommerce_analytics.not_null_mart_customer_orders_total_revenue.2fff1d6d64 (compile): 10:06:07.542799 => 10:06:07.591586
+[0m10:06:07.594645 [debug] [Thread-1  ]: Timing info for test.ecommerce_analytics.not_null_mart_customer_orders_customer_id.65556082dc (execute): 10:06:07.593674 => 10:06:07.593719
+[0m10:06:07.597331 [debug] [Thread-3  ]: Began compiling node test.ecommerce_analytics.not_null_mart_daily_sales_order_date.0e908a3de5
+[0m10:06:07.599310 [debug] [Thread-4  ]: Began executing node test.ecommerce_analytics.not_null_mart_customer_orders_total_revenue.2fff1d6d64
+[0m10:06:07.601268 [debug] [Thread-2  ]: Timing info for test.ecommerce_analytics.unique_mart_customer_orders_customer_id.dd48be91bc (compile): 10:06:07.564750 => 10:06:07.600612
+[0m10:06:07.603169 [debug] [Thread-1  ]: Finished running node test.ecommerce_analytics.not_null_mart_customer_orders_customer_id.65556082dc
+[0m10:06:07.616023 [debug] [Thread-4  ]: Timing info for test.ecommerce_analytics.not_null_mart_customer_orders_total_revenue.2fff1d6d64 (execute): 10:06:07.615277 => 10:06:07.615322
+[0m10:06:07.614281 [debug] [Thread-3  ]: Writing injected SQL for node "test.ecommerce_analytics.not_null_mart_daily_sales_order_date.0e908a3de5"
+[0m10:06:07.617897 [debug] [Thread-2  ]: Began executing node test.ecommerce_analytics.unique_mart_customer_orders_customer_id.dd48be91bc
+[0m10:06:07.619786 [debug] [Thread-1  ]: Began running node test.ecommerce_analytics.unique_mart_daily_sales_order_date.f90d005909
+[0m10:06:07.622968 [debug] [Thread-4  ]: Finished running node test.ecommerce_analytics.not_null_mart_customer_orders_total_revenue.2fff1d6d64
+[0m10:06:07.625610 [debug] [Thread-2  ]: Timing info for test.ecommerce_analytics.unique_mart_customer_orders_customer_id.dd48be91bc (execute): 10:06:07.624760 => 10:06:07.624791
+[0m10:06:07.628226 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.not_null_mart_customer_orders_customer_id.65556082dc, now test.ecommerce_analytics.unique_mart_daily_sales_order_date.f90d005909)
+[0m10:06:07.631160 [debug] [Thread-4  ]: Began running node test.ecommerce_analytics.not_null_mart_revenue_by_category_category.0607d31a2e
+[0m10:06:07.634077 [debug] [Thread-2  ]: Finished running node test.ecommerce_analytics.unique_mart_customer_orders_customer_id.dd48be91bc
+[0m10:06:07.635825 [debug] [Thread-1  ]: Began compiling node test.ecommerce_analytics.unique_mart_daily_sales_order_date.f90d005909
+[0m10:06:07.638414 [debug] [Thread-4  ]: Re-using an available connection from the pool (formerly test.ecommerce_analytics.not_null_mart_customer_orders_total_revenue.2fff1d6d64, now test.ecommerce_analytics.not_null_mart_revenue_by_category_category.0607d31a2e)
+[0m10:06:07.653170 [debug] [Thread-3  ]: Timing info for test.ecommerce_analytics.not_null_mart_daily_sales_order_date.0e908a3de5 (compile): 10:06:07.604167 => 10:06:07.652126
+[0m10:06:07.655739 [debug] [Thread-1  ]: Writing injected SQL for node "test.ecommerce_analytics.unique_mart_daily_sales_order_date.f90d005909"
+[0m10:06:07.657057 [debug] [Thread-4  ]: Began compiling node test.ecommerce_analytics.not_null_mart_revenue_by_category_category.0607d31a2e
+[0m10:06:07.658876 [debug] [Thread-3  ]: Began executing node test.ecommerce_analytics.not_null_mart_daily_sales_order_date.0e908a3de5
+[0m10:06:07.673564 [debug] [Thread-3  ]: Timing info for test.ecommerce_analytics.not_null_mart_daily_sales_order_date.0e908a3de5 (execute): 10:06:07.672308 => 10:06:07.672378
+[0m10:06:07.674962 [debug] [Thread-4  ]: Writing injected SQL for node "test.ecommerce_analytics.not_null_mart_revenue_by_category_category.0607d31a2e"
+[0m10:06:07.678323 [debug] [Thread-3  ]: Finished running node test.ecommerce_analytics.not_null_mart_daily_sales_order_date.0e908a3de5
+[0m10:06:07.687203 [debug] [Thread-1  ]: Timing info for test.ecommerce_analytics.unique_mart_daily_sales_order_date.f90d005909 (compile): 10:06:07.640775 => 10:06:07.686185
+[0m10:06:07.689440 [debug] [Thread-4  ]: Timing info for test.ecommerce_analytics.not_null_mart_revenue_by_category_category.0607d31a2e (compile): 10:06:07.661237 => 10:06:07.688417
+[0m10:06:07.691038 [debug] [Thread-1  ]: Began executing node test.ecommerce_analytics.unique_mart_daily_sales_order_date.f90d005909
+[0m10:06:07.693576 [debug] [Thread-4  ]: Began executing node test.ecommerce_analytics.not_null_mart_revenue_by_category_category.0607d31a2e
+[0m10:06:07.696492 [debug] [Thread-1  ]: Timing info for test.ecommerce_analytics.unique_mart_daily_sales_order_date.f90d005909 (execute): 10:06:07.695506 => 10:06:07.695554
+[0m10:06:07.699062 [debug] [Thread-4  ]: Timing info for test.ecommerce_analytics.not_null_mart_revenue_by_category_category.0607d31a2e (execute): 10:06:07.698249 => 10:06:07.698281
+[0m10:06:07.702098 [debug] [Thread-1  ]: Finished running node test.ecommerce_analytics.unique_mart_daily_sales_order_date.f90d005909
+[0m10:06:07.705203 [debug] [Thread-4  ]: Finished running node test.ecommerce_analytics.not_null_mart_revenue_by_category_category.0607d31a2e
+[0m10:06:07.710794 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:06:07.712215 [debug] [MainThread]: Connection 'test.ecommerce_analytics.unique_mart_customer_orders_customer_id.dd48be91bc' was properly closed.
+[0m10:06:07.713815 [debug] [MainThread]: Connection 'test.ecommerce_analytics.unique_mart_daily_sales_order_date.f90d005909' was properly closed.
+[0m10:06:07.715046 [debug] [MainThread]: Connection 'test.ecommerce_analytics.not_null_mart_daily_sales_order_date.0e908a3de5' was properly closed.
+[0m10:06:07.716181 [debug] [MainThread]: Connection 'test.ecommerce_analytics.not_null_mart_revenue_by_category_category.0607d31a2e' was properly closed.
+[0m10:06:07.724202 [debug] [MainThread]: Command end result
+[0m10:06:07.836421 [debug] [MainThread]: Acquiring new postgres connection 'generate_catalog'
+[0m10:06:07.838223 [info ] [MainThread]: Building catalog
+[0m10:06:07.849810 [debug] [ThreadPool]: Acquiring new postgres connection 'airflow.information_schema'
+[0m10:06:07.889874 [debug] [ThreadPool]: Using postgres connection "airflow.information_schema"
+[0m10:06:07.892144 [debug] [ThreadPool]: On airflow.information_schema: BEGIN
+[0m10:06:07.895965 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:06:07.923259 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m10:06:07.930379 [debug] [ThreadPool]: Using postgres connection "airflow.information_schema"
+[0m10:06:07.934849 [debug] [ThreadPool]: On airflow.information_schema: /* {"app": "dbt", "dbt_version": "1.7.0", "profile_name": "ecommerce_analytics", "target_name": "dev", "connection_name": "airflow.information_schema"} */
+
+    
+    
+
+    select
+        'airflow' as table_database,
+        sch.nspname as table_schema,
+        tbl.relname as table_name,
+        case tbl.relkind
+            when 'v' then 'VIEW'
+            when 'm' then 'MATERIALIZED VIEW'
+            else 'BASE TABLE'
+        end as table_type,
+        tbl_desc.description as table_comment,
+        col.attname as column_name,
+        col.attnum as column_index,
+        pg_catalog.format_type(col.atttypid, col.atttypmod) as column_type,
+        col_desc.description as column_comment,
+        pg_get_userbyid(tbl.relowner) as table_owner
+
+    from pg_catalog.pg_namespace sch
+    join pg_catalog.pg_class tbl on tbl.relnamespace = sch.oid
+    join pg_catalog.pg_attribute col on col.attrelid = tbl.oid
+    left outer join pg_catalog.pg_description tbl_desc on (tbl_desc.objoid = tbl.oid and tbl_desc.objsubid = 0)
+    left outer join pg_catalog.pg_description col_desc on (col_desc.objoid = tbl.oid and col_desc.objsubid = col.attnum)
+    where ((upper(sch.nspname) = upper('analytics_staging') and
+           upper(tbl.relname) = upper('stg_products')) or (upper(sch.nspname) = upper('analytics_analytics') and
+           upper(tbl.relname) = upper('mart_customer_orders')) or (upper(sch.nspname) = upper('analytics_analytics') and
+           upper(tbl.relname) = upper('mart_daily_sales')) or (upper(sch.nspname) = upper('analytics_staging') and
+           upper(tbl.relname) = upper('stg_customers')) or (upper(sch.nspname) = upper('analytics_staging') and
+           upper(tbl.relname) = upper('stg_orders')) or (upper(sch.nspname) = upper('analytics_analytics') and
+           upper(tbl.relname) = upper('mart_revenue_by_category')))
+      and not pg_is_other_temp_schema(sch.oid) -- not a temporary schema belonging to another session
+      and tbl.relpersistence in ('p', 'u') -- [p]ermanent table or [u]nlogged table. Exclude [t]emporary tables
+      and tbl.relkind in ('r', 'v', 'f', 'p', 'm') -- o[r]dinary table, [v]iew, [f]oreign table, [p]artitioned table, [m]aterialized view. Other values are [i]ndex, [S]equence, [c]omposite type, [t]OAST table
+      and col.attnum > 0 -- negative numbers are used for system columns such as oid
+      and not col.attisdropped -- column as not been dropped
+
+    order by
+        sch.nspname,
+        tbl.relname,
+        col.attnum
+[0m10:06:07.954382 [debug] [ThreadPool]: SQL status: SELECT 57 in 0.0 seconds
+[0m10:06:07.981733 [debug] [ThreadPool]: On airflow.information_schema: ROLLBACK
+[0m10:06:07.983569 [debug] [ThreadPool]: On airflow.information_schema: Close
+[0m10:06:08.053273 [info ] [MainThread]: Catalog written to /opt/airflow/dbt_project/target/catalog.json
+[0m10:06:08.057036 [debug] [MainThread]: Resource report: {"command_name": "generate", "command_success": true, "command_wall_clock_time": 2.118422, "process_user_time": 5.1261, "process_kernel_time": 0.362981, "process_mem_max_rss": "123844", "process_in_blocks": "2944", "process_out_blocks": "0"}
+[0m10:06:08.059702 [debug] [MainThread]: Command `dbt docs generate` succeeded at 10:06:08.059165 after 2.12 seconds
+[0m10:06:08.061505 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m10:06:08.063639 [debug] [MainThread]: Connection 'airflow.information_schema' was properly closed.
+[0m10:06:08.065185 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x721648f70100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x721647942af0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x721646da65b0>]}
+[0m10:06:08.066739 [debug] [MainThread]: Flushing usage events
