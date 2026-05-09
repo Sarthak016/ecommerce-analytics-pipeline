@@ -9,19 +9,33 @@ models:
         tests:
           - not_null
           - unique
+
       - name: customer_id
         description: "Customer who placed the order"
         tests:
           - not_null
+          - relationships:
+              to: ref('stg_customers')
+              field: customer_id
+
       - name: product_id
         description: "Product ordered"
         tests:
           - not_null
+          - relationships:
+              to: ref('stg_products')
+              field: product_id
+
       - name: status
         description: "Order status"
         tests:
           - accepted_values:
               values: ['completed', 'cancelled', 'pending']
+
+      - name: total_amount
+        description: "Total order amount"
+        tests:
+          - not_null
 
   - name: stg_customers
     description: "Cleaned and deduplicated customers data"
@@ -31,6 +45,7 @@ models:
         tests:
           - not_null
           - unique
+
       - name: email
         description: "Customer email address"
         tests:
