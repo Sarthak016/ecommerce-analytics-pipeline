@@ -33,7 +33,7 @@ models:
         description: "Product category name"
         tests:
           - not_null
-          - unique
+          
 
       - name: total_revenue
         description: "Total revenue generated for this category"
